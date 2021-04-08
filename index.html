@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/png" href="favicon.png"/>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -35,17 +35,17 @@
         </ul>
     </header>
 
-    <div class="top-page">
-        <div>
+    <div class="top-page" id="home-title">
+        <div class="container">
             <!-- Page Title -->
             <h1>Hi! I'm Jess.</h1>
-            <span>A <em>petite</em> Front-End developer.</em><span>
+            <span>A <em>petite</em> Front-End developer.</em></span>
             
             <!-- Call-to-Action -->
-            <button>Read About Me</button>
+            <a class="secondary-btn" href="./about.html">Read About Me</a>
         </div>
 
-        <div>
+        <div class="container">
             <!-- Top Image -->
             <img src="#" alt="Responsive showcase on desktop, tablet, and mobile.">
         </div>
@@ -54,65 +54,60 @@
     <main>
 
         <!-- RECENT PROJECTS -->
-        <section id="recent-projects">
+        <section class="container" id="recent-projects">
             <h2>Recent Projects</h2>
 
-            <!-- Recent Project 1 -->
-            <div>
-                <img src="./assets/project-1-500-350.jpg" alt="CSS Zen Garden top of website screenshot">
-                <h3>CSS Zen Garden Challenge</h3>
-                <!-- Tech Stack -->
-                <div><i class="fab fa-html5"></i><i class="fab fa-css3"></i></div>
-                <span>Live website link: </span><a href="https://jessicagozali.com.au/zen-garden-challenge-jg/" target="_blank">https://jessicagozali.com.au/zen-garden-challenge-jg/</a>
+            <div class="flex-container">
+                <!-- Recent Project 1 -->
+                <div>
+                    <img src="./assets/project-1-500-350.jpg" alt="CSS Zen Garden top of website screenshot">
+                    <h3>CSS Zen Garden Challenge</h3>
+                    <!-- Tech Stack -->
+                    <div class="tech-stack"><span class="brand-html5"><i class="fab fa-html5"></i></span><span class="brand-css3"><i class="fab fa-css3 brand-css3"></i></span></div>
+                    <span>Live website link: </span><a href="https://jessicagozali.com.au/zen-garden-challenge-jg/" target="_blank">https://jessicagozali.com.au/zen-garden-challenge-jg/</a>
+                </div>
+
+                <!-- Recent Project 2 -->
+                <div>
+                    <img src="./assets/project-2-500-350.jpg" alt="Band Multipage Website top of website screenshot">
+                    <h3>Band Challenge: Multipage Website</h3>
+                    <!-- Tech Stack -->
+                    <div class="tech-stack"><span class="brand-html5"><i class="fab fa-html5"></i></span><span class="brand-css3"><i class="fab fa-css3 brand-css3"></i></span></div>
+                    <span>Live website link: </span><a href="https://jessicagozali.com.au/band-challenge-jg/" target="_blank">https://jessicagozali.com.au/band-challenge-jg/</a>
+                </div>
             </div>
 
-            <!-- Recent Project 2 -->
-            <div>
-                <img src="./assets/project-2-500-350.jpg" alt="Band Multipage Website top of website screenshot">
-                <h3>Band Challenge: Multipage Website</h3>
-                <!-- Tech Stack -->
-                <div><i class="fab fa-html5"></i><i class="fab fa-css3"></i></div>
-                <span>Live website link: </span><a href="https://jessicagozali.com.au/band-challenge-jg/" target="_blank">https://jessicagozali.com.au/band-challenge-jg/</a>
-            </div>
+            <!-- Call-to-Action -->
+            <a class="secondary-btn" href="./projects.html">View All</a>
         </section>
 
         <!-- CONTACT ME -->
-        <section>
+        <section class="picture-bg">
             <h2>Contact Me</h2>
             <p>Find out what else I can do!</p>
 
             <!-- Call-to-Action -->
-            <button>Message Me</button>
+            <a class="secondary-btn" href="./contact.html">Message Me</a>
         </section>
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <div>
+        <div class="container">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <h5>Follow Me</h5>
+                <span>
+                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp"></i></a>
+                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </span>
+            </div>
+
             <!-- Footer Logo -->
-            <div class="logo">
+            <div class="alt-logo">
                 <img src="./assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
                 <span>Copyright &copy; 2021 Jessica Gozali Portfolio.</span>
-            </div>
-
-            <!-- Social Media Links -->
-            <div>
-                <h5>Follow Me</h5>
-                <span><i class="fab fa-github"></i><i class="fab fa-free-code-camp"></i><i class="fab fa-linkedin"></i></span>
-            </div>
-
-            <!-- Latest Blog Post -->
-            <div>
-                <h5>Latest Post</h5>
-                <div>
-                    <img src="./assets/thumb-last-post-100-100.jpg" alt="">
-                    <div>
-                        <h6>Online Journal for Your Team</h6>
-                        <span>by Jessica Gozali | 18 Apr 2021</span>
-                        <p>Looking for an online journal to keep your projects running efficiently? Today we ...</p>
-                        <a href="#">Read more >></a>
-                    </div>
-                </div>
             </div>
         </div>
     </footer>
