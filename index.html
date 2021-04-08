@@ -19,48 +19,42 @@
     <title>HOME | Jessica Gozali Portfolio</title>
 </head>
 <body>
-    <header>
-        <!-- Navigation Menu -->
-        <nav>
-            <!-- Logo -->
-            <div>
-                <img src="./assets/jessica-gozali-logo-512-512.png" alt="Jessica Gozali Logo">
-            </div>
 
-            <!-- Nav links -->
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+    <header id="header">
+        <div class="logo">
+            <img src="./assets/jessica-gozali-logo-512-259.png" alt="Jessica Gozali Logo">
+        </div>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </header>
 
-                <!-- Call-to-Action -->
-                <li><a href="#">My Resume</a></li>
-            </ul>
-        </nav>
+    <div class="top-page">
+        <div>
+            <!-- Page Title -->
+            <h1>Hi! I'm Jess.</h1>
+            <span>A <em>petite</em> Front-End developer.</em><span>
+            
+            <!-- Call-to-Action -->
+            <button>Read About Me</button>
+        </div>
 
         <div>
-            <div>
-                <!-- Page Title -->
-                <h1>Hi! I'm Jess.</h1>
-                <span>A <em>petite</em> Front-End developer.</em><span>
-                
-                <!-- Call-to-Action -->
-                <button>Read About Me</button>
-            </div>
-
-            <div>
-                <!-- Top Image -->
-                <img src="#" alt="Responsive showcase on desktop, tablet, and mobile.">
-            </div>
+            <!-- Top Image -->
+            <img src="#" alt="Responsive showcase on desktop, tablet, and mobile.">
         </div>
-    </header>
+    </div>
 
     <main>
 
         <!-- RECENT PROJECTS -->
-        <section>
+        <section id="recent-projects">
             <h2>Recent Projects</h2>
 
             <!-- Recent Project 1 -->
@@ -96,8 +90,8 @@
     <footer>
         <div>
             <!-- Footer Logo -->
-            <div>
-                <img src="./assets/jessica-gozali-footer-logo-512-512.png" alt="Jessica Gozali Footer Logo">
+            <div class="logo">
+                <img src="./assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
                 <span>Copyright &copy; 2021 Jessica Gozali Portfolio.</span>
             </div>
 

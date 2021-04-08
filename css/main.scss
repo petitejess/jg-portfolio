@@ -1,0 +1,174 @@
+@import "partials/variables";
+@import "partials/home";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+// TYPOGRAPHY
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    font-weight: $heading-weight;
+}
+
+p,
+span,
+a {
+    font-family: $text-font;
+    font-weight: $text-weight;
+}
+
+// HEADER and NAV MENU
+#header {
+    background-color: $primary-color;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: $accent-light-color;
+        text-align: center;
+    }
+
+    li a {
+        display: block;
+        padding: 20px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $heading-font;
+        font-weight: $heading-weight;
+        color: $black-color;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+
+    .menu {
+        clear: both;
+        max-height: 0;
+        @include transition(max-height, .2s, ease-out, 0s);
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        display: block;
+        float: right;
+        padding: 28px 18px;
+        position: relative;
+        user-select: none;
+
+        .navicon {
+            background: $black-color;
+            display: block;
+            height: 3px;
+            position: relative;
+            @include transition(background, .2s, ease-out, 0s);
+            width: 24px;
+
+            &::before,
+            &::after {
+                background: $black-color;
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                @include transition(all, .2s, ease-out, 0s);
+                width: 100%;
+            }
+            &::before {
+                top: 7px;
+            }
+            &::after {
+                top: -7px;
+            }
+          }
+    }
+
+    .menu-btn {
+        display: none;
+    
+        &:checked ~ {
+            .menu {
+                max-height: 330px;
+            }
+            .menu-icon {
+                .navicon {
+                    background: transparent;
+                    &::before {
+                        transform: rotate(-45deg);
+                    }
+                    &::after {
+                        transform: rotate(45deg);
+                    }
+                }
+                &:not(.steps) .navicon {
+                    &::before,
+                    &::after {
+                        top: 0;
+                    }
+                }
+            } 
+        }
+    }
+}
+
+// LOGO
+.logo {
+    float: left;
+    padding: 0px 0px 0px 5px;
+
+    img {
+        max-height: 54px;
+        width: auto;
+    }
+}
+
+// TOP PAGE
+
+  
+// MEDIA QUERIES
+// Tablet > 768px
+@media (min-width: 768px) {
+    #header {
+        ul {
+            background-color: $primary-color;
+        }
+
+        li {
+            float: left;
+
+            a {
+                padding: 20px 30px;
+            }
+        }
+
+        .menu {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+
+        .menu-icon {
+            display: none;
+        }
+    }
+
+    .logo {
+        padding-left: 20px;
+    }
+}
