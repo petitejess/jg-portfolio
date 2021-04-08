@@ -1,0 +1,162 @@
+#recent-projects img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #recent-projects img {
+    max-width: 300px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+}
+
+p,
+span,
+a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+#header {
+  background-color: #ffdbd8;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+#header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff3e0;
+  text-align: center;
+}
+#header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: #222;
+}
+#header li a:hover {
+  background-color: #ffe4e2;
+}
+#header .menu {
+  clear: both;
+  max-height: 0;
+  -webkit-transition: max-height 0.2s ease-out 0s;
+  -moz-transition: max-height 0.2s ease-out 0s;
+  -ms-transition: max-height 0.2s ease-out 0s;
+  -o-transition: max-height 0.2s ease-out 0s;
+  transition: max-height 0.2s ease-out 0s;
+}
+#header .menu-icon {
+  cursor: pointer;
+  display: block;
+  float: right;
+  padding: 28px 18px;
+  position: relative;
+  user-select: none;
+}
+#header .menu-icon .navicon {
+  background: #222;
+  display: block;
+  height: 3px;
+  position: relative;
+  -webkit-transition: background 0.2s ease-out 0s;
+  -moz-transition: background 0.2s ease-out 0s;
+  -ms-transition: background 0.2s ease-out 0s;
+  -o-transition: background 0.2s ease-out 0s;
+  transition: background 0.2s ease-out 0s;
+  width: 24px;
+}
+#header .menu-icon .navicon::before, #header .menu-icon .navicon::after {
+  background: #222;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -moz-transition: all 0.2s ease-out 0s;
+  -ms-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+  width: 100%;
+}
+#header .menu-icon .navicon::before {
+  top: 7px;
+}
+#header .menu-icon .navicon::after {
+  top: -7px;
+}
+#header .menu-btn {
+  display: none;
+}
+#header .menu-btn:checked ~ .menu {
+  max-height: 330px;
+}
+#header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+#header .menu-btn:checked ~ .menu-icon .navicon::before {
+  transform: rotate(-45deg);
+}
+#header .menu-btn:checked ~ .menu-icon .navicon::after {
+  transform: rotate(45deg);
+}
+#header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon::before, #header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon::after {
+  top: 0;
+}
+
+.logo {
+  float: left;
+  padding: 0px 0px 0px 5px;
+}
+.logo img {
+  max-height: 54px;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  #header ul {
+    background-color: #ffdbd8;
+  }
+  #header li {
+    float: left;
+  }
+  #header li a {
+    padding: 20px 30px;
+  }
+  #header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  #header .menu-icon {
+    display: none;
+  }
+
+  .logo {
+    padding-left: 20px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
