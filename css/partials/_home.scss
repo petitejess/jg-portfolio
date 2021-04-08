@@ -1,16 +1,71 @@
+// TOP PAGE
+#home-title {
+    min-height: 100vh;
+    background-color: $primary-color;
+    justify-content: space-evenly;
+
+    h1 {
+        font-size: 3em;
+        line-height: 1.15em;
+        margin-bottom: 20px;
+    }
+
+    span {
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .secondary-btn {
+        margin-top: 30px;
+    }
+}
+
 // RECENT PROJECTS
 #recent-projects {
+    .flex-container > div {
+        margin-bottom: 70px;
+    }
+
+    .flex-container {
+        a {
+            background-color: $accent-light-color;
+    
+            &:hover {
+                background-color: $secondary-color;
+                @include transition(background-color, .2s, ease-out, 0s);
+            }
+        }
+    }
+
     img {
         width: 100%;
+    }
+
+    .tech-stack {
+        font-size: 1.4em;
+        padding: 5px 0;
+        .brand-html5 { color: #e34c26; }
+        .brand-css3 { color: #264de4; }
+        i {
+            margin: 0 5px;
+        }
     }
 }
 
 // MEDIA QUERIES
 // Tablet > 768px
 @media (min-width: 768px) {
+    #home-title h1 {
+        font-size: 5em;
+    }
+
     #recent-projects {
+        .flex-container {
+            margin-top: 70px;
+        }
+
         img {
-            max-width: 300px;
+            max-width: 90%;
         }
     }
 }
