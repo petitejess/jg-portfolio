@@ -44,7 +44,7 @@ p,
 span,
 a {
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   color: #222;
 }
 
@@ -56,6 +56,7 @@ a {
   background-color: #ffdbd8;
   position: fixed;
   width: 100%;
+  overflow-x: hidden;
   z-index: 3;
 }
 #header ul {
@@ -73,6 +74,7 @@ a {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   font-size: 1.25em;
+  letter-spacing: 0.15px;
   background-color: #222;
   color: #f6e2c2;
 }
@@ -160,7 +162,7 @@ a {
 
 .logo {
   float: left;
-  padding: 0px 0px 0px 5px;
+  padding: 0px 0px 0px 10px;
 }
 .logo img {
   max-height: 54px;
@@ -207,6 +209,7 @@ section {
   background-color: transparent;
   padding: 5px 15px 10px;
   font-size: 1.1em;
+  letter-spacing: 0.15px;
   color: #222;
 }
 .secondary-btn:hover {
@@ -336,7 +339,7 @@ footer .alt-logo span {
   }
 
   .logo {
-    padding-left: 20px;
+    padding-left: 30px;
   }
 
   section {
@@ -372,9 +375,27 @@ footer .alt-logo span {
 #home-title span {
   display: block;
   font-size: 1.5em;
+  font-weight: 300;
 }
 #home-title .secondary-btn {
   margin-top: 30px;
+}
+#home-title::before {
+  content: "JESSICAGOZALIJESSICAGOZALI";
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: #ffe4e2;
+  font-size: 80vh;
+  position: absolute;
+  z-index: 0;
+}
+#home-title .container {
+  z-index: 1;
+}
+
+.title-img {
+  width: 100%;
+  height: auto;
 }
 
 #recent-projects .flex-container > div {
@@ -393,6 +414,7 @@ footer .alt-logo span {
 }
 #recent-projects img {
   width: 100%;
+  height: auto;
 }
 #recent-projects .tech-stack {
   font-size: 1.4em;
@@ -411,6 +433,11 @@ footer .alt-logo span {
 @media (min-width: 768px) {
   #home-title h1 {
     font-size: 5em;
+  }
+
+  .title-img {
+    width: 120%;
+    height: auto;
   }
 
   #recent-projects .flex-container {

@@ -13,11 +13,31 @@
     span {
         display: block;
         font-size: 1.5em;
+        font-weight: 300;
     }
 
     .secondary-btn {
         margin-top: 30px;
     }
+
+    &::before {
+        content: 'JESSICAGOZALIJESSICAGOZALI';
+        font-family: $heading-font;
+        font-weight: $heading-weight;
+        color: $secondary-color;
+        font-size: 80vh;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .container {
+        z-index: 1;
+    }
+}
+
+.title-img {
+    width: 100%;
+    height: auto;
 }
 
 // RECENT PROJECTS
@@ -39,6 +59,7 @@
 
     img {
         width: 100%;
+        height: auto;
     }
 
     .tech-stack {
@@ -55,8 +76,15 @@
 // MEDIA QUERIES
 // Tablet > 768px
 @media (min-width: 768px) {
-    #home-title h1 {
-        font-size: 5em;
+    #home-title {
+        h1 {
+            font-size: 5em;
+        }
+    }
+
+    .title-img {
+        width: 120%;
+        height: auto;
     }
 
     #recent-projects {
