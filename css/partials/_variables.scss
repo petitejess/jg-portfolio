@@ -9,8 +9,9 @@ $black-color: #222;
 // FONTS
 $heading-font: 'Oswald', sans-serif;
 $heading-weight: 600;
+$heading-letter-spacing: .15px;
 $text-font: 'Open Sans', sans-serif;
-$text-weight: 300;
+$text-weight: 400;
 
 // TRANSITIONS
 @mixin transition($property, $duration, $timing-function, $delay) {

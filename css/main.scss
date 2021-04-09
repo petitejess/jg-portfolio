@@ -50,6 +50,7 @@ a { text-decoration: none; }
     background-color: $primary-color;
     position: fixed;
     width: 100%;
+    overflow-x: hidden;
     z-index: 3;
 
     ul {
@@ -68,6 +69,7 @@ a { text-decoration: none; }
         font-family: $heading-font;
         font-weight: $heading-weight;
         font-size: 1.25em;
+        letter-spacing: $heading-letter-spacing;
         background-color: $black-color;
         color: $accent-color;
 
@@ -159,7 +161,7 @@ a { text-decoration: none; }
 // LOGO
 .logo {
     float: left;
-    padding: 0px 0px 0px 5px;
+    padding: 0px 0px 0px 10px;
 
     img {
         max-height: 54px;
@@ -210,6 +212,7 @@ section {
     background-color: transparent;
     padding: 5px 15px 10px;
     font-size: 1.1em;
+    letter-spacing: $heading-letter-spacing;
     color: $black-color;
 
     &:hover {
@@ -301,7 +304,7 @@ footer {
         }
     }
 }
-  
+
 // MEDIA QUERIES
 // Tablet > 768px
 @media (min-width: 768px) {
@@ -350,7 +353,7 @@ footer {
     }
 
     .logo {
-        padding-left: 20px;
+        padding-left: 30px;
     }
 
     section {
