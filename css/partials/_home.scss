@@ -21,7 +21,7 @@
     }
 
     &::before {
-        content: 'JESSICAGOZALIJESSICAGOZALI';
+        content: 'JESSICAGOZALI';
         font-family: $heading-font;
         font-weight: $heading-weight;
         color: $secondary-color;
@@ -77,8 +77,14 @@
 // Tablet > 768px
 @media (min-width: 768px) {
     #home-title {
+        justify-content: center;
+        
         h1 {
             font-size: 5em;
+        }
+
+        .container {
+            margin: 30px;
         }
     }
 
