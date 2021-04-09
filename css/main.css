@@ -198,6 +198,7 @@ section {
   justify-content: center;
   align-items: center;
   min-height: 100px;
+  overflow: hidden;
 }
 
 .secondary-btn {
@@ -385,7 +386,7 @@ footer .alt-logo span {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   color: #ffe4e2;
-  font-size: 80vh;
+  font-size: 30em;
   position: absolute;
   z-index: 0;
 }
@@ -412,6 +413,9 @@ footer .alt-logo span {
   -o-transition: background-color 0.2s ease-out 0s;
   transition: background-color 0.2s ease-out 0s;
 }
+#recent-projects .flex-container div {
+  width: 100%;
+}
 #recent-projects img {
   width: 100%;
   height: auto;
@@ -437,13 +441,11 @@ footer .alt-logo span {
   #home-title h1 {
     font-size: 5em;
   }
+  #home-title::before {
+    font-size: 50em;
+  }
   #home-title .container {
     margin: 30px;
-  }
-
-  .title-img {
-    width: 120%;
-    height: auto;
   }
 
   #recent-projects .flex-container {
@@ -451,6 +453,12 @@ footer .alt-logo span {
   }
   #recent-projects img {
     max-width: 90%;
+  }
+}
+@media (min-width: 1024px) {
+  .title-img {
+    width: 120%;
+    height: auto;
   }
 }
 
