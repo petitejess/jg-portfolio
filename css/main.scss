@@ -48,14 +48,39 @@ a { text-decoration: none; }
 // HEADER and NAV MENU
 #header {
     background-color: $primary-color;
-    position: fixed;
     width: 100%;
     overflow-x: hidden;
+}
+
+// NAVIGATION MENU
+#fixed-menu {
+    @extend #header;
+    overflow-x: visible;
+    position: fixed;
+    top: $gold-strip-height;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
     z-index: 3;
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     width: 100%;
+    //     height: $gold-strip-height;
+    //     top: -($gold-strip-height);
+    //     left: 0;
+    //     background-color: $accent-color;
+    //     background-image: url('../assets/gold-glitter-strip-500-31.jpg');
+    //     background-size: auto;
+    //     background-repeat: repeat-x;
+    // }
+
+    @include gold-strip(top);
 
     ul {
         margin: 0;
         padding: 0;
+        margin-top: 64px;
         list-style: none;
         overflow: hidden;
         background-color: $black-color;
@@ -156,6 +181,7 @@ a { text-decoration: none; }
             } 
         }
     }
+
 }
 
 // LOGO
@@ -221,6 +247,11 @@ section {
         background-color: $black-color;
         @include transition(all, .2s, ease-out, 0s);
     }
+
+    i {
+        font-size: 1.1em;
+        margin-right: 2.5px;
+    }
 }
 
 // PICTURE BG
@@ -265,9 +296,12 @@ section {
 
 // FOOTER
 footer {
+    position: relative;
     background-color: $black-color;
     padding-top: 50px;
     padding-bottom: 50px;
+
+    @include gold-strip(bottom);
 
     span,
     h5,
@@ -313,9 +347,10 @@ footer {
 
     h5 { font-size: 1.45em; }
 
-    #header {
+    #fixed-menu {
         ul {
             background-color: $primary-color;
+            margin-top: 0;
         }
 
         li {
