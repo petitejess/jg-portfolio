@@ -1,0 +1,74 @@
+// TOP PAGE
+#about-title {
+    &::before {
+        content: 'ABOUT ME';
+        font-family: $heading-font;
+        font-weight: $heading-weight;
+        color: $secondary-color;
+        font-size: 8em;
+        position: absolute;
+        z-index: 0;
+    }
+}
+
+// KEY SKILLS
+#key-skills {
+
+    i { font-size: 3em; }
+
+    .flex-container {
+
+        .flex-container {
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+    
+            span {
+                display: inline-block;
+                flex: 1;
+                margin: 20px 5px 10px;
+            }
+        }
+    }
+}
+
+// EDUCATIONS & EXPERIENCE
+#edu-exp {
+    .flex-container {
+        div {
+            width: 100%;
+            margin-bottom: 50px;
+            margin-top: 30px;
+        }
+
+        span {
+            display: block;
+            line-height: 175%;
+        }
+    }
+}
+
+// MEDIA QUERIES
+// Tablet > 768px
+@media (min-width: 768px) {
+    #key-skills {
+        .flex-container {
+            flex-wrap: wrap;
+
+            > div {
+                width: 40%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .flex-container {
+        
+                span {
+                    flex: 0;
+                    min-width: 5em;
+                }
+            }
+        }
+    }
+}

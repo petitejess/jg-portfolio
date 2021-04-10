@@ -5,6 +5,9 @@ $accent-color: #f6e2c2;
 $accent-light-color: #fff3e0;
 $alt-bg-color: #f5f5f5;
 $black-color: #222;
+$grey-color: #474747;
+$red-color: #f24052;
+$green-color: #46b94f;
 
 // FONTS
 $heading-font: 'Oswald', sans-serif;
@@ -33,6 +36,13 @@ $gold-strip-height: 10px;
         background-size: auto;
         background-repeat: repeat-x;
     }
+}
+
+// SHADOWS
+@mixin box-shadow {
+    box-shadow: 0px 1px 20px 0px rgb(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 1px 20px 0px rgb(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 20px 0px rgb(0, 0, 0, 0.15);
 }
 
 // TRANSITIONS
