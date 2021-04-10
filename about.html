@@ -14,41 +14,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 
     <title>ABOUT | Jessica Gozali Portfolio</title>
 </head>
 <body>
     <header id="header">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="./assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
+        <div id="fixed-menu">
+            <a class="skip-to-content-link secondary-btn" href="#main">
+                Skip to content
+            </a>
+
+            <!-- LOGO -->
+            <a href="/index.html" class="logo">
+                <img src="/assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
+            </a>
+
+            <!-- HAMBURGER MENU -->
+            <input class="menu-btn" type="checkbox" id="menu-btn" aria-label="Toggle mobile navigation" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+            <!-- NAVIGATION MENU -->
+            <ul class="menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
         </div>
+        
 
-        <!-- Hamburger Menu -->
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-
-        <!-- Navigation Menu -->
-        <ul class="menu">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./projects.html">Projects</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
+        <!-- Top of Page -->
+        <div class="top-page" id="about-title">
+            <div class="container">
+                <!-- Page Title -->
+                <h1>About Me</h1>
+            </div>
+        </div>
     </header>
 
-    <!-- Top of Page -->
-    <div class="top-page" id="about-title">
-        <div class="container">
-            <!-- Page Title -->
-            <h1>About Me</h1>
-        </div>
-    </div>
-
-    <main>
-
+    <main id="main">
         <!-- JESSICA GOZALI -->
         <section class="container alt-bg">
             <div class="grid-container">
@@ -56,14 +62,18 @@
                     <h2>Jessica Gozali</h2>
                     <span>Front-End Web Developer</span>
                 </div>
-                <div class="grid-img">
-                    <img src="./assets/about-top-image-800-550.jpg" width="800" height="550" alt="Jessica and her Moogle comrades">
-                </div>
-                <div class="grid-p">
+
+                <figure class="grid-img">
+                    <img src="/assets/about-top-image-800-550.jpg" width="800" height="550" alt="Jessica with her Moogle comrades">
+                    <figcaption>P.S.: I'm a team player. I love working in a team! I fit perfectly within the team!</figcaption>
+                </figure>
+                <div class="grid-excerpt">
                     <p>I love helping people make their dreams come true and being part of people's successful stories. <em>That</em> is my dream and <em>that</em> would be my story.</p>
                     <p>All I have currently is my passion in software development. I wish to learn many things until I find my niche in this field and start building useful products that would help to make this world a better place.</p>
-                    <p>P.S.: I'm a team player. I love working in a team! I fit perfectly in the team!</p>
-                    <a class="secondary-btn" href="./resume/JessicaGozali_Resume_Template.pdf" target="_blank">My Resume</a>
+                </div>
+                <div class="grid-footer">
+                    <!-- Call-to-Action -->
+                    <a class="secondary-btn" href="/resume/JessicaGozali_Resume_Template.pdf" target="_blank"><i class="far fa-file-pdf"></i> My Resume (PDF)</a>
                 </div>
             </div>
         </section>
@@ -176,7 +186,8 @@
 
             <!-- Footer Logo -->
             <div class="alt-logo">
-                <img src="./assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
+
+                <img src="/assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
                 <span>Copyright &copy; 2021 Jessica Gozali.</span>
             </div>
         </div>

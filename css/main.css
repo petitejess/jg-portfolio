@@ -40,7 +40,7 @@ h6 {
   font-size: 1.1em;
 }
 
-p,
+p, figcaption,
 span,
 a {
   font-family: "Open Sans", sans-serif;
@@ -48,13 +48,23 @@ a {
   color: #222;
 }
 
-p {
+figcaption {
+  font-size: 0.9em;
+  color: #474747;
+}
+
+p, figcaption {
   line-height: 150%;
-  margin-bottom: 1em;
+  max-width: 80ch;
+  margin-bottom: 1.5em;
 }
 
 a {
   text-decoration: none;
+  margin: 2px;
+}
+a:focus {
+  outline: 2px dotted #f24052;
 }
 
 #header, #fixed-menu {
@@ -67,8 +77,6 @@ a {
   overflow-x: visible;
   position: fixed;
   top: 10px;
-  padding-top: 2.5px;
-  padding-bottom: 2.5px;
   z-index: 3;
 }
 #fixed-menu::before {
@@ -82,6 +90,22 @@ a {
   background-image: url("../assets/gold-glitter-strip-500-31.jpg");
   background-size: auto;
   background-repeat: repeat-x;
+}
+#fixed-menu .skip-to-content-link {
+  position: absolute;
+  left: 50%;
+  margin-top: 0;
+  background-color: #ffdbd8;
+  box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.15);
+  transform: translateY(-200%);
+}
+#fixed-menu .skip-to-content-link:focus {
+  transform: translateY(150%);
+}
+#fixed-menu .skip-to-content-link:hover {
+  background-color: #222;
 }
 #fixed-menu ul {
   margin: 0;
@@ -187,7 +211,7 @@ a {
 
 .logo {
   float: left;
-  padding: 0px 0px 0px 10px;
+  padding: 2.5px 0px 0px 10px;
 }
 .logo img {
   max-height: 54px;
@@ -214,6 +238,31 @@ section {
 }
 .flex-container div {
   width: 100%;
+}
+
+.grid-title {
+  grid-area: title;
+}
+
+.grid-img {
+  grid-area: image;
+}
+.grid-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid-excerpt {
+  grid-area: excerpt;
+}
+
+.grid-footer {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "title title" "image image" "author date" "excerpt excerpt" "footer footer";
 }
 
 .top-page {
@@ -298,14 +347,16 @@ section.alt-bg {
 }
 .picture-bg h2,
 .picture-bg p,
+.picture-bg figcaption,
 .picture-bg a {
   z-index: 1;
 }
-.picture-bg p {
+.picture-bg p, .picture-bg figcaption {
   background-color: #ffdbd8;
 }
 .picture-bg h2,
-.picture-bg p {
+.picture-bg p,
+.picture-bg figcaption {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -341,11 +392,16 @@ footer a:hover {
   -o-transition: color 0.2s ease-out 0s;
   transition: color 0.2s ease-out 0s;
 }
-footer .social-media span {
-  font-size: 1.5em;
-}
-footer .social-media span i {
+footer .professional-acc i {
   margin: 10px 5px 5px;
+  font-size: 2.85em;
+}
+footer .professional-acc a {
+  display: inline-block;
+  margin: 5px;
+}
+footer .professional-acc span {
+  display: block;
 }
 footer .alt-logo img {
   width: 100%;
@@ -418,14 +474,15 @@ footer .alt-logo span {
     flex-wrap: nowrap;
   }
 
+  .grid-container {
+    grid-template-areas: "image title title" "image author date" "image excerpt excerpt" "image footer footer";
+  }
+
   .secondary-btn {
     font-size: 1.2em;
   }
 
-  footer .social-media span {
-    font-size: 2em;
-  }
-  footer .social-media span i {
+  footer .professional-acc i {
     margin: 20px 10px 10px;
   }
 }
@@ -522,7 +579,7 @@ footer .alt-logo span {
   }
 }
 #about-title::before {
-  content: "ABOUT";
+  content: "ABOUT ME";
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   color: #ffe4e2;

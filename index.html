@@ -14,34 +14,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 
     <title>HOME | Jessica Gozali Portfolio</title>
 </head>
 <body>
-
     <header id="header">
         <div id="fixed-menu">
+            <a class="skip-to-content-link secondary-btn" href="#main">
+                Skip to content
+            </a>
+
             <!-- LOGO -->
-            <div class="logo">
-                <img src="./assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
-            </div>
+            <a href="/index.html" class="logo">
+                <img src="/assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
+            </a>
 
             <!-- HAMBURGER MENU -->
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <input class="menu-btn" type="checkbox" id="menu-btn" aria-label="Toggle mobile navigation" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
             <!-- NAVIGATION MENU -->
             <ul class="menu">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </div>
-        
-        <!-- TOP PAGE -->
+
+        <!-- Top of Page -->
         <div class="top-page" id="home-title">
             <div class="container">
                 <!-- Page Title -->
@@ -49,17 +52,17 @@
                 <span>A <em>petite</em> Front-End developer.</em></span>
                 
                 <!-- Call-to-Action -->
-                <a class="secondary-btn" href="./resume/JessicaGozali_Resume_Template.pdf" target="_blank"><i class="far fa-file-pdf"></i> My Resume (PDF)</a>
+                <a class="secondary-btn" href="/resume/JessicaGozali_Resume_Template.pdf" target="_blank"><i class="far fa-file-pdf"></i> My Resume (PDF)</a>
             </div>
 
             <div class="container">
                 <!-- Top Image -->
-                <img class="title-img" src="./assets/responsive-display-500-370.png" width="500" height="370" alt="Responsive website showcase on large, medium, and small screens.">
+                <img class="title-img" src="/assets/responsive-display-500-370.png" width="500" height="370" alt="Responsive website showcase on large, medium, and small screens.">
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main">
 
         <!-- RECENT PROJECTS -->
         <section class="container" id="recent-projects">
@@ -68,7 +71,7 @@
             <div class="flex-container">
                 <!-- Recent Project 1 -->
                 <div>
-                    <img src="./assets/project-1-500-350.jpg" width="500" height="350" alt="CSS Zen Garden top of website screenshot">
+                    <img src="/assets/project-1-500-350.jpg" width="500" height="350" alt="CSS Zen Garden top of website screenshot">
                     <h3>CSS Zen Garden Challenge</h3>
                     <!-- Tech Stack -->
                     <div class="tech-stack"><span class="brand-html5"><i class="fab fa-html5"></i></span><span class="brand-css3"><i class="fab fa-css3 brand-css3"></i></span></div>
@@ -77,7 +80,7 @@
 
                 <!-- Recent Project 2 -->
                 <div>
-                    <img src="./assets/project-2-500-350.jpg" width="500" height="350" alt="Band Multipage Website top of website screenshot">
+                    <img src="/assets/project-2-500-350.jpg" width="500" height="350" alt="Band Multipage Website top of website screenshot">
                     <h3>Band Challenge: Multipage Website</h3>
                     <!-- Tech Stack -->
                     <div class="tech-stack"><span class="brand-html5"><i class="fab fa-html5"></i></span><span class="brand-css3"><i class="fab fa-css3 brand-css3"></i></span></div>
@@ -86,7 +89,7 @@
             </div>
 
             <!-- Call-to-Action -->
-            <a class="secondary-btn" href="./projects.html">View All</a>
+            <a class="secondary-btn" href="/projects.html">View All</a>
         </section>
 
         <!-- CONTACT ME -->
@@ -95,26 +98,26 @@
             <p>Find out what else I can do!</p>
 
             <!-- Call-to-Action -->
-            <a class="secondary-btn" href="./contact.html">Message Me</a>
+            <a class="secondary-btn" href="/contact.html">Message Me</a>
         </section>
     </main>
 
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <!-- Social Media Links -->
-            <div class="social-media">
+            <!-- Professional Accounts -->
+            <div class="professional-acc">
                 <h5>Follow Me</h5>
-                <span>
-                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp"></i></a>
-                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </span>
+                <div>
+                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
+                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
+                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                </div>
             </div>
 
             <!-- Footer Logo -->
             <div class="alt-logo">
-                <img src="./assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
+                <img src="/assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
                 <span>Copyright &copy; 2021 Jessica Gozali.</span>
             </div>
         </div>

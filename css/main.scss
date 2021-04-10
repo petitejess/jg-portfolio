@@ -43,12 +43,26 @@ a {
     color: $black-color;
 }
 
-p {
-    line-height: 150%;
-    margin-bottom: 1em;
+figcaption {
+    @extend p;
+    font-size: .9em;
+    color: $grey-color;
 }
 
-a { text-decoration: none; }
+p {
+    line-height: 150%;
+    max-width: 80ch;
+    margin-bottom: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    margin: 2px;
+
+    &:focus {
+        outline: 2px dotted $red-color;
+    }
+}
 
 // HEADER and NAV MENU
 #header {
@@ -63,24 +77,25 @@ a { text-decoration: none; }
     overflow-x: visible;
     position: fixed;
     top: $gold-strip-height;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
     z-index: 3;
-
-    // &::before {
-    //     content: '';
-    //     position: absolute;
-    //     width: 100%;
-    //     height: $gold-strip-height;
-    //     top: -($gold-strip-height);
-    //     left: 0;
-    //     background-color: $accent-color;
-    //     background-image: url('../assets/gold-glitter-strip-500-31.jpg');
-    //     background-size: auto;
-    //     background-repeat: repeat-x;
-    // }
-
     @include gold-strip(top);
+
+    .skip-to-content-link {
+        position: absolute;
+        left: 50%;
+        margin-top: 0;
+        background-color: $primary-color;
+        @include box-shadow;
+        transform: translateY(-200%);
+
+        &:focus {
+            transform: translateY(150%);
+        }
+
+        &:hover {
+            background-color: $black-color;
+        }
+    }
 
     ul {
         margin: 0;
@@ -192,7 +207,7 @@ a { text-decoration: none; }
 // LOGO
 .logo {
     float: left;
-    padding: 0px 0px 0px 10px;
+    padding: 2.5px 0px 0px 10px;
 
     img {
         max-height: 54px;
@@ -213,6 +228,7 @@ section {
     text-align: center;
 }
 
+// flexbox
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -224,8 +240,35 @@ section {
     }
 }
 
+// grid
+.grid-title {
+    grid-area: title;
+}
+
+.grid-img {
+    grid-area: image;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.grid-excerpt {
+    grid-area: excerpt;
+}
+
+.grid-footer {
+    grid-area: footer;
+}
+
 .grid-container {
-    
+    display: grid;
+    grid-template-areas:
+    "title title"
+    "image image"
+    "author date"
+    "excerpt excerpt"
+    "footer footer";
 }
 
 // TOP PAGE
@@ -240,9 +283,7 @@ section {
     align-items: center;
     min-height: 150px;
     overflow: hidden;
-    box-shadow: 0px 1px 20px 0px rgb(0, 0, 0, 0.15);
-    -webkit-box-shadow: 0px 1px 20px 0px rgb(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 1px 20px 0px rgb(0, 0, 0, 0.15);
+    @include box-shadow;
 
     .container {
         z-index: 1;
@@ -297,9 +338,7 @@ section.alt-bg {
     justify-content: center;
     align-items: center;
     width: 100%;
-    box-shadow: 0px 1px 20px 0px rgb(0, 0, 0, 0.15);
-    -webkit-box-shadow: 0px 1px 20px 0px rgb(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 1px 20px 0px rgb(0, 0, 0, 0.15);
+    @include box-shadow;
 
     &::after {
         content: '';
@@ -336,7 +375,6 @@ footer {
     background-color: $black-color;
     padding-top: 50px;
     padding-bottom: 50px;
-
     @include gold-strip(bottom);
 
     span,
@@ -350,14 +388,18 @@ footer {
         @include transition(color, .2s, ease-out, 0s);
     }
 
-    .social-media {
-        span {
-            font-size: 1.5em;
-
-            i {
-                margin: 10px 5px 5px;
-            }
+    .professional-acc {
+        i {
+            margin: 10px 5px 5px;
+            font-size: 2.85em;
         }
+
+        a { 
+            display: inline-block;
+            margin: 5px;
+        }
+
+        span { display: block; }
     }
 
     .alt-logo {
@@ -437,18 +479,22 @@ footer {
         flex-wrap: nowrap;
     }
 
+    .grid-container {
+        grid-template-areas:
+        "image title title"
+        "image author date"
+        "image excerpt excerpt"
+        "image footer footer";
+    }
+
     .secondary-btn {
         font-size: 1.2em;
     }
 
     footer {
-        .social-media {
-            span {
-                font-size: 2em;
-
-                i {
-                    margin: 20px 10px 10px;
-                }
+        .professional-acc {
+            i {
+                margin: 20px 10px 10px;
             }
         }
     }
