@@ -38,18 +38,7 @@
         margin-bottom: 70px;
     }
 
-    .flex-container {
-        span {
-            a {
-                background-color: $accent-light-color;
-        
-                &:hover {
-                    background-color: $secondary-color;
-                    @include transition(background-color, .2s, ease-out, 0s);
-                }
-            }
-        }
-        
+    .flex-container {        
         div {
             width: 100%;
         }
@@ -60,16 +49,6 @@
         height: auto;
         margin-bottom: 10px;
         @include box-shadow;
-    }
-
-    .tech-stack {
-        font-size: 1.4em;
-        padding: 5px 0;
-        .brand-html5 { color: #e34c26; }
-        .brand-css3 { color: #264de4; }
-        i {
-            margin: 0 5px;
-        }
     }
 }
 

@@ -45,6 +45,9 @@ a {
 
 figcaption {
     @extend p;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: .9em;
     color: $grey-color;
 }
@@ -121,7 +124,7 @@ a {
         &:hover {
             background-color: $accent-color;
             color: $black-color;
-            @include transition(all, .2s, ease-out, 0s);
+            transition: all .2s ease-out 0s;
         }
     }
 
@@ -137,7 +140,7 @@ a {
     .menu {
         clear: both;
         max-height: 0;
-        @include transition(max-height, .2s, ease-out, 0s);
+        transition: max-height .2s ease-out 0s;
     }
 
     .menu-icon {
@@ -153,7 +156,7 @@ a {
             display: block;
             height: 3px;
             position: relative;
-            @include transition(background, .2s, ease-out, 0s);
+            transition: background .2s ease-out 0s;
             width: 24px;
 
             &::before,
@@ -163,7 +166,7 @@ a {
                 display: block;
                 height: 100%;
                 position: absolute;
-                @include transition(all, .2s, ease-out, 0s);
+                transition: all .2s ease-out 0s;
                 width: 100%;
             }
             &::before {
@@ -243,10 +246,18 @@ section {
 // grid
 .grid-title {
     grid-area: title;
+    margin-bottom: 1.5em;
+    
+    h1,
+    h2 {
+        margin-bottom: 0;
+    }
 }
 
 .grid-img {
     grid-area: image;
+    margin-bottom: 1.5em;
+    @include box-shadow;
     img {
         max-width: 100%;
         height: auto;
@@ -307,7 +318,7 @@ section {
     &:hover {
         color: $secondary-color;
         background-color: $black-color;
-        @include transition(all, .2s, ease-out, 0s);
+        transition: all .2s ease-out 0s;
     }
 
     i {
@@ -316,13 +327,32 @@ section {
     }
 }
 
+// TECH STACK ICONS
+.tech-stack {
+    font-size: 2.75em;
+    padding: 5px 0;
+    .brand-html5 { color: #e34c26; }
+    .brand-css3 { color: #264de4; }
+    i {
+        margin: 0 5px;
+    }
+}
+
+// HIGHLIGHT LINKS
+.highlight-link {
+    background-color: $accent-light-color;
+
+    &:hover {
+        background-color: $secondary-color;
+        transition: background-color .2s ease-out 0s;
+    }
+}
+
 // ALTERNATE BG COLOUR
 section.alt-bg {
     background-color: $alt-bg-color;
     max-width: 100%;
     margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 // PICTURE BG
@@ -385,7 +415,7 @@ footer {
 
     a:hover {
         color: $primary-color;
-        @include transition(color, .2s, ease-out, 0s);
+        transition: color .2s ease-out 0s;
     }
 
     .professional-acc {
@@ -450,7 +480,7 @@ footer {
                 &:hover {
                     background-color: $black-color;
                     color: $accent-color;
-                    @include transition(all, .2s, ease-out, 0s);
+                    transition: all .2s ease-out 0s;
                 }
             }
         }
