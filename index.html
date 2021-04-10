@@ -21,41 +21,43 @@
 <body>
 
     <header id="header">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="./assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
+        <div id="fixed-menu">
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="./assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
+            </div>
+
+            <!-- HAMBURGER MENU -->
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+            <!-- NAVIGATION MENU -->
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
         </div>
+        
+        <!-- TOP PAGE -->
+        <div class="top-page" id="home-title">
+            <div class="container">
+                <!-- Page Title -->
+                <h1>Hi! I'm Jess.</h1>
+                <span>A <em>petite</em> Front-End developer.</em></span>
+                
+                <!-- Call-to-Action -->
+                <a class="secondary-btn" href="./resume/JessicaGozali_Resume_Template.pdf" target="_blank"><i class="far fa-file-pdf"></i> My Resume (PDF)</a>
+            </div>
 
-        <!-- Hamburger Menu -->
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-
-        <!-- Navigation Menu -->
-        <ul class="menu">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./projects.html">Projects</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
+            <div class="container">
+                <!-- Top Image -->
+                <img class="title-img" src="./assets/responsive-display-500-370.png" width="500" height="370" alt="Responsive website showcase on large, medium, and small screens.">
+            </div>
+        </div>
     </header>
-
-    <!-- Top of Page -->
-    <div class="top-page" id="home-title">
-        <div class="container">
-            <!-- Page Title -->
-            <h1>Hi! I'm Jess.</h1>
-            <span>A <em>petite</em> Front-End developer.</em></span>
-            
-            <!-- Call-to-Action -->
-            <a class="secondary-btn" href="./resume/JessicaGozali_Resume_Template.pdf" target="_blank">My Resume</a>
-        </div>
-
-        <div class="container">
-            <!-- Top Image -->
-            <img class="title-img" src="./assets/responsive-display-500-370.png" width="500" height="370" alt="Responsive website showcase on large, medium, and small screens.">
-        </div>
-    </div>
 
     <main>
 

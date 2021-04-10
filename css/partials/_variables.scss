@@ -13,6 +13,28 @@ $heading-letter-spacing: .15px;
 $text-font: 'Open Sans', sans-serif;
 $text-weight: 400;
 
+// TOP AND BOTTOM GOLD STRIPS
+$gold-strip-height: 10px;
+@mixin gold-strip($position) {
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: $gold-strip-height;
+        @if($position == 'top') {
+            top: -($gold-strip-height);
+        }
+        @else {
+            bottom: 0;
+        }
+        left: 0;
+        background-color: $accent-color;
+        background-image: url('../assets/gold-glitter-strip-500-31.jpg');
+        background-size: auto;
+        background-repeat: repeat-x;
+    }
+}
+
 // TRANSITIONS
 @mixin transition($property, $duration, $timing-function, $delay) {
     -webkit-transition: $property $duration $timing-function $delay;
