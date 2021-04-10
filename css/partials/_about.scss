@@ -14,7 +14,10 @@
 // KEY SKILLS
 #key-skills {
 
-    i { font-size: 3em; }
+    img {
+        width: 3em;
+        height: 3em;
+    }
 
     .flex-container {
 
@@ -40,6 +43,15 @@
             width: 100%;
             margin-bottom: 50px;
             margin-top: 30px;
+
+            span:last-child {
+                font-size: 1.1em;
+                font-weight: $heading-weight;
+            }
+
+            span:nth-last-child(2) {
+                color: $grey-color;
+            }
         }
 
         span {
@@ -52,6 +64,13 @@
 // MEDIA QUERIES
 // Tablet > 768px
 @media (min-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            "image title title"
+            "image excerpt excerpt"
+            "image footer footer";
+    }
+
     #key-skills {
         .flex-container {
             flex-wrap: wrap;

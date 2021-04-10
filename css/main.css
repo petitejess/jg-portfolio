@@ -315,8 +315,8 @@ section.alt-bg {
   background-color: #f5f5f5;
   max-width: 100%;
   margin: 0;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .picture-bg {
@@ -357,8 +357,8 @@ section.alt-bg {
 .picture-bg h2,
 .picture-bg p,
 .picture-bg figcaption {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 footer {
@@ -476,6 +476,20 @@ footer .alt-logo span {
 
   .grid-container {
     grid-template-areas: "image title title" "image author date" "image excerpt excerpt" "image footer footer";
+    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 5%;
+    text-align: left;
+  }
+  .grid-container .grid-title {
+    margin-bottom: 1.5em;
+  }
+  .grid-container .grid-title h1,
+.grid-container .grid-title h2 {
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .grid-container .grid-footer a {
+    margin: 0;
   }
 
   .secondary-btn {
@@ -519,10 +533,10 @@ footer .alt-logo span {
 #recent-projects .flex-container > div {
   margin-bottom: 70px;
 }
-#recent-projects .flex-container a {
+#recent-projects .flex-container span a {
   background-color: #fff3e0;
 }
-#recent-projects .flex-container a:hover {
+#recent-projects .flex-container span a:hover {
   background-color: #ffe4e2;
   -webkit-transition: background-color 0.2s ease-out 0s;
   -moz-transition: background-color 0.2s ease-out 0s;
@@ -536,6 +550,10 @@ footer .alt-logo span {
 #recent-projects img {
   width: 100%;
   height: auto;
+  margin-bottom: 10px;
+  box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.15);
 }
 #recent-projects .tech-stack {
   font-size: 1.4em;
@@ -588,8 +606,9 @@ footer .alt-logo span {
   z-index: 0;
 }
 
-#key-skills i {
-  font-size: 3em;
+#key-skills img {
+  width: 3em;
+  height: 3em;
 }
 #key-skills .flex-container .flex-container {
   justify-content: center;
@@ -608,12 +627,23 @@ footer .alt-logo span {
   margin-bottom: 50px;
   margin-top: 30px;
 }
+#edu-exp .flex-container div span:last-child {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+#edu-exp .flex-container div span:nth-last-child(2) {
+  color: #474747;
+}
 #edu-exp .flex-container span {
   display: block;
   line-height: 175%;
 }
 
 @media (min-width: 768px) {
+  .grid-container {
+    grid-template-areas: "image title title" "image excerpt excerpt" "image footer footer";
+  }
+
   #key-skills .flex-container {
     flex-wrap: wrap;
   }

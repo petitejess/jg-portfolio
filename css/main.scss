@@ -321,8 +321,8 @@ section.alt-bg {
     background-color: $alt-bg-color;
     max-width: 100%;
     margin: 0;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 // PICTURE BG
@@ -364,8 +364,8 @@ section.alt-bg {
 
     h2,
     p {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -485,6 +485,23 @@ footer {
         "image author date"
         "image excerpt excerpt"
         "image footer footer";
+        grid-template-columns: 2fr 1fr 1fr;
+        column-gap: 5%;
+        text-align: left;
+
+        .grid-title {
+            margin-bottom: 1.5em;
+
+            h1,
+            h2 {
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+
+        .grid-footer {
+            a { margin: 0; }
+        }
     }
 
     .secondary-btn {
