@@ -234,6 +234,30 @@ section {
   margin-bottom: 0;
 }
 
+.grid-author {
+  grid-area: author;
+}
+.grid-author::before {
+  content: "By ";
+}
+
+.grid-date {
+  grid-area: date;
+}
+.grid-date::before {
+  content: " | Published on ";
+}
+
+.grid-author,
+.grid-date {
+  color: #474747;
+}
+.grid-author::before,
+.grid-date::before {
+  font-weight: 300;
+  font-style: italic;
+}
+
 .grid-img {
   grid-area: image;
   margin-bottom: 1.5em;
@@ -629,6 +653,25 @@ footer .alt-logo span {
     flex: 0;
     min-width: 5em;
   }
+}
+#projects-title::before {
+  content: "MY PROJECTS";
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: #ffe4e2;
+  font-size: 8em;
+  position: absolute;
+  z-index: 0;
+}
+
+#blog-title::before {
+  content: "BLOG";
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: #ffe4e2;
+  font-size: 8em;
+  position: absolute;
+  z-index: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
