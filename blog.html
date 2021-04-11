@@ -4,9 +4,201 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    
     <title>BLOG | Jessica Gozali Portfolio</title>
 </head>
 <body>
-    
+    <header id="header">
+        <div id="fixed-menu">
+            <a class="skip-to-content-link secondary-btn" href="#main">
+                Skip to content
+            </a>
+
+            <!-- LOGO -->
+            <a href="./index.html" class="logo">
+                <img src="./assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
+            </a>
+
+            <!-- HAMBURGER MENU -->
+            <input class="menu-btn" type="checkbox" id="menu-btn" aria-label="Toggle mobile navigation" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+            <!-- NAVIGATION MENU -->
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Top of Page -->
+        <div class="top-page" id="blog-title">
+            <div class="container">
+                <!-- Page Title -->
+                <h1>Blog</h1>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- BLOG POST 1 -->
+        <section class="alt-bg">
+            <div class="container">
+                <div class="grid-container">
+                    <div class="grid-title">
+                        <h2>Online Journal for Your Team</h2>
+                        <span class="grid-author">Jessica G</span><span class="grid-date">18 Apr 2021</span>
+                    </div>
+
+                    <figure class="grid-img">
+                        <img src="./assets/posts-img/blog-post-1-500-350.jpg" width="800" height="550" alt="A pink journal, pen with golden cap and golden accessories.">
+                    </figure>
+
+                    <div class="grid-excerpt">
+                        <p>Looking for an online journal to keep your projects running efficiently? Now, we have several options to choose from. In this article, I would compare some of the popular project management tools we can find today.</p>
+                    </div>
+
+                    <div class="grid-footer">
+                        <!-- Call-to-Action -->
+                        <a class="secondary-btn" href="./blog-post.html" target="_blank">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG POST 2 -->
+        <section>
+            <div class="container">
+                <div class="grid-container">
+                    <div class="grid-title">
+                        <h2>Work from Home Setup Guide</h2>
+                        <span class="grid-author">Jessica G</span><span class="grid-date">6 Feb 2021</span>
+                    </div>
+
+                    <figure class="grid-img">
+                        <img src="./assets/posts-img/blog-post-2-500-350.jpg" width="800" height="550" alt="Computer, laptop and office chair setup at home.">
+                    </figure>
+
+                    <div class="grid-excerpt">
+                        <p>A guide to maximise productivity when you work from home that you should keep it a secret from your Boss. This time, I will guide you through setting up your workstation, choosing the right gears and software for your home office.</p>
+                    </div>
+
+                    <div class="grid-footer">
+                        <!-- Call-to-Action -->
+                        <a class="secondary-btn" href="./blog-post.html" target="_blank">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG POST 3 -->
+        <section class="alt-bg">
+            <div class="container">
+                <div class="grid-container">
+                    <div class="grid-title">
+                        <h2>Invitation for Moogles</h2>
+                        <span class="grid-author">Jessica G</span><span class="grid-date">9 Dec 2020</span>
+                    </div>
+
+                    <figure class="grid-img">
+                        <img src="./assets/posts-img/blog-post-3-500-350.jpg" width="800" height="550" alt="Screenshot of player on Fat Moogle mount flying near Bahrr Lehs at night.">
+                    </figure>
+
+                    <div class="grid-excerpt">
+                        <p>Calling all moogles in Hydaelyn! Come to Luluca’s birthday celebration in Bahrr Lehs, Four Arms, The Churning Mists (15-28). And, don’t forget your poms! There will be all-you-can-have Kupo Nuts and never-ending mischievous games to play.</p>
+                    </div>
+
+                    <div class="grid-footer">
+                        <!-- Call-to-Action -->
+                        <a class="secondary-btn" href="./blog-post.html" target="_blank">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG POST 4 -->
+        <section>
+            <div class="container">
+                <div class="grid-container">
+                    <div class="grid-title">
+                        <h2>DIY Smart Home at a Budget</h2>
+                        <span class="grid-author">Jessica G</span><span class="grid-date">20 Sep 2020</span>
+                    </div>
+
+                    <figure class="grid-img">
+                        <img src="./assets/posts-img/blog-post-4-500-350.jpg" width="800" height="550" alt="A Google Nest Mini speaker on a wooden shelf.">
+                    </figure>
+
+                    <div class="grid-excerpt">
+                        <p>DIY setup of your smart home system is not that expensive or difficult. I would review several common brands that you can easily find in your local gadget stores, based on their price value, performance, compatibility and how easy it is to set them up.</p>
+                    </div>
+
+                    <div class="grid-footer">
+                        <!-- Call-to-Action -->
+                        <a class="secondary-btn" href="./blog-post.html" target="_blank">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG POST 5 -->
+        <section class="alt-bg">
+            <div class="container">
+                <div class="grid-container">
+                    <div class="grid-title">
+                        <h2>Nintendo Free to Play: Pok&eacute;mon Caf&eacute; Mix</h2>
+                        <span class="grid-author">Jessica G</span><span class="grid-date">1 Jul 2020</span>
+                    </div>
+
+                    <figure class="grid-img">
+                        <img src="./assets/posts-img/blog-post-5-500-350.jpg" width="800" height="550" alt="Screenshot of Pokemon Cafe Mix game.">
+                    </figure>
+
+                    <div class="grid-excerpt">
+                        <p>Bored? Just play this cute puzzle game. Clear the puzzle, build your caf&eacute; to see more Pok&eacute;mon visiting your place. Cuteness overload! The best part is, it is free to play!</p>
+                    </div>
+
+                    <div class="grid-footer">
+                        <!-- Call-to-Action -->
+                        <a class="secondary-btn" href="./blog-post.html" target="_blank">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <!-- Professional Accounts -->
+            <div class="professional-acc">
+                <h5>Find Me</h5>
+                <div>
+                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
+                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
+                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                </div>
+            </div>
+
+            <!-- Footer Logo -->
+            <div class="alt-logo">
+                <img src="./assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
+                <span>Copyright &copy; 2021 Jessica Gozali.</span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

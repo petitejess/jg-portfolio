@@ -254,6 +254,32 @@ section {
     }
 }
 
+.grid-author {
+    grid-area: author;
+
+    &::before {
+        content: 'By ';
+    }
+}
+
+.grid-date {
+    grid-area: date;
+
+    &::before {
+        content: ' | Published on ';
+    }
+}
+
+.grid-author,
+.grid-date {
+    color: $grey-color;
+
+    &::before {
+        font-weight: 300;
+        font-style: italic;
+    }
+}
+
 .grid-img {
     grid-area: image;
     margin-bottom: 1.5em;
@@ -550,3 +576,5 @@ footer {
 // PAGES STYLING
 @import "partials/home";
 @import "partials/about";
+@import "partials/projects";
+@import "partials/blog";

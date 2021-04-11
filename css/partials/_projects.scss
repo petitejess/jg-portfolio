@@ -1,7 +1,7 @@
 // TOP PAGE
-#blog-title {
+#projects-title {
     &::before {
-        content: 'BLOG';
+        content: 'MY PROJECTS';
         font-family: $heading-font;
         font-weight: $heading-weight;
         color: $secondary-color;
