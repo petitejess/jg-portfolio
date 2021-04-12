@@ -26,30 +26,15 @@
 }
 
 #project-details-page {
-    .grid-container {
-        grid-template-areas:
-            "image"
-            "title"
-            "excerpt";
-        
-        h2 { margin-top: 30px; }
-        p { text-align: left; }
-    }
-
-    .flex-container {
-        .container {
-            max-width: 100%;
+    #project-details-page {
+        .grid-container {
+            .grid-article {
+                h2 {
+                    text-align: left;
+                    margin-bottom: 10px;
+                }
+            }
         }
-    }
-
-    .flex-container > div:last-child {
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-
-    .grid-gallery {
-        margin-top: 30px;
-        column-gap: 10px;
     }
 }
 
@@ -57,36 +42,29 @@
 // Tablet > 768px
 @media (min-width: 768px) {
     #project-details-page {
-        .flex-container {
-            .container {
-                max-width: 90%;
-                margin-left: 0;
+        .grid-img img {
+            width: 90%;
+            float: left;
+        }
+
+        .grid-title {
+            text-align: left;
+
+            h2 {
+                text-align: left;
+                margin-top: 30px;
             }
         }
 
-        .flex-container > {
-            div:first-child {
-                order: 2;
-            }
-
+        .grid-article {
             div:last-child {
-                margin-top: 0px;
-                margin-bottom: 0px;
+                text-align: left;
             }
         }
 
-        .grid-container {
-            grid-template-areas:
-                "image title title"
-                "image excerpt excerpt";
-
-            .grid-title {
-                margin-bottom: 1em;
-                
-                .tech-stack { font-size: 1.75em; }
-
-                h2 { margin-top: 0; }
-            }
+        .grid-sidebar {
+            max-width: 80%;
+            margin: 0 auto;
         }
     }
 }

@@ -67,13 +67,15 @@
 // MEDIA QUERIES
 // Tablet > 768px
 @media (min-width: 768px) {
-    .grid-container {
-        grid-template-areas:
-            "image title title"
-            "image excerpt excerpt"
-            "image footer footer";
+    #about-page {
+        .grid-meta {
+            grid-template-areas:
+                "image title title"
+                "image excerpt excerpt"
+                "image footer footer";
+        }    
     }
-
+    
     #key-skills {
         .flex-container {
             flex-wrap: wrap;
