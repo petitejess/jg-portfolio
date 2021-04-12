@@ -15,7 +15,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+form label {
     font-family: $heading-font;
     font-weight: $heading-weight;
     color: $black-color;
@@ -37,7 +38,8 @@ h6 { font-size: 1.1em; }
 
 p,
 span,
-a {
+a,
+textarea {
     font-family: $text-font;
     font-weight: $text-weight;
     color: $black-color;
@@ -328,28 +330,41 @@ section {
 }
 
 // BUTTONS
-.secondary-btn {
+.primary-btn {
     display: inline-block;
     text-decoration: none;
     font-family: $heading-font;
     font-weight: $heading-weight;
     border: 3px solid $black-color;
-    background-color: transparent;
     padding: 5px 15px 10px;
     margin-top: 30px;
     font-size: 1.1em;
     letter-spacing: $heading-letter-spacing;
+    background-color: $black-color;
+    color: #fff;
+
+    i {
+        font-size: 1.1em;
+        margin-right: 2.5px;
+    }
+
+    &:hover {
+        color: $black-color;
+        background-color: #fff;
+        transition: all .2s ease-out 0s;
+    }
+}
+
+.secondary-btn {
+    @extend .primary-btn;
+
+    background-color: transparent;
     color: $black-color;
 
     &:hover {
         color: $secondary-color;
         background-color: $black-color;
         transition: all .2s ease-out 0s;
-    }
-
-    i {
-        font-size: 1.1em;
-        margin-right: 2.5px;
     }
 }
 
@@ -362,6 +377,21 @@ section {
     i {
         margin: 0 5px;
     }
+}
+
+// PROFESSIONAL ACCOUNTS
+.professional-acc {
+    i {
+        margin: 10px 5px 5px;
+        font-size: 2.85em;
+    }
+
+    a { 
+        display: inline-block;
+        margin: 5px;
+    }
+
+    span { display: block; }
 }
 
 // HIGHLIGHT LINKS
@@ -442,20 +472,6 @@ footer {
     a:hover {
         color: $primary-color;
         transition: color .2s ease-out 0s;
-    }
-
-    .professional-acc {
-        i {
-            margin: 10px 5px 5px;
-            font-size: 2.85em;
-        }
-
-        a { 
-            display: inline-block;
-            margin: 5px;
-        }
-
-        span { display: block; }
     }
 
     .alt-logo {
@@ -564,12 +580,10 @@ footer {
         font-size: 1.2em;
     }
 
-    footer {
-        .professional-acc {
+    .professional-acc {
             i {
                 margin: 20px 10px 10px;
             }
-        }
     }
 }
 
@@ -578,3 +592,4 @@ footer {
 @import "partials/about";
 @import "partials/projects";
 @import "partials/blog";
+@import "partials/contact";

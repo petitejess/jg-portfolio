@@ -4,9 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
     <title>CONTACT | Jessica Gozali Portfolio</title>
 </head>
 <body>
-    
+    <header id="header">
+        <div id="fixed-menu">
+            <a class="skip-to-content-link secondary-btn" href="#main">
+                Skip to content
+            </a>
+
+            <!-- LOGO -->
+            <a href="./index.html" class="logo">
+                <img src="./assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
+            </a>
+
+            <!-- HAMBURGER MENU -->
+            <input class="menu-btn" type="checkbox" id="menu-btn" aria-label="Toggle mobile navigation" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+            <!-- NAVIGATION MENU -->
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Top of Page -->
+        <div class="top-page" id="contact-title">
+            <div class="container">
+                <!-- Contact Title -->
+                <h1>Contact Me</h1>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="contact-me">
+            <div class="container">
+                <div class="flex-container">
+                    <div>
+                        <p>Let me help with your next project. Ask me anything, or check out my current projects in GitHub or CodePen, or download my resume. Or, you can use the contact form to leave me a message.</p>
+                        <h2>Account Links</h2>
+                        <div class="professional-acc">
+                            <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span> GitHub</span></a>
+                            <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-codepen"></i><span> CodePen</span></a>
+                        </div>
+                        <!-- Call-to-Action -->
+                        <a class="secondary-btn" href="./resume/JessicaGozali_Resume_Template.pdf" target="_blank"><i class="far fa-file-pdf"></i> My Resume (PDF)</a>
+                    </div>
+                    <div>
+                        <h2>Contact Form</h2>
+                        <form action="" method="" autocomplete="on">
+                            <label for="name">Name: <sup class="required">(required)</sup></label>
+                            <input type="text" name="name" id="name" placeholder="e.g. Jane Citizen" required>
+                            <label for="email">Email: <sup class="required">(required)</sup></label>
+                            <input type="email" name="email" id="email" placeholder="e.g. emailaddress@domain.com" required>
+                            <label for="message">Message: <sup class="required">(required)</sup></label>
+                            <textarea name="" id="" cols="30" rows="5" placeholder="e.g. Can you make me a custom LMS?" required></textarea>
+                            <p>By sending through this form, you confirm that you've read and accepted my <a href="#">Privacy Policy</a>.</p>
+                            <input class="primary-btn" type="submit" name="submit" id="submit" value="Send Message">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <!-- Professional Accounts -->
+            <div class="professional-acc">
+                <h5>Find Me</h5>
+                <div>
+                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
+                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
+                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                </div>
+            </div>
+
+            <!-- Footer Logo -->
+            <div class="alt-logo">
+                <img src="./assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
+                <span>Copyright &copy; 2021 Jessica Gozali.</span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
