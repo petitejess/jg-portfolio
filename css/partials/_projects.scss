@@ -10,3 +10,83 @@
         z-index: 0;
     }
 }
+
+// Project Details Page Styling
+// TOP PAGE
+#project-details-title {
+    &::before {
+        content: 'THE PROJECT TITLE';
+        font-family: $heading-font;
+        font-weight: $heading-weight;
+        color: $secondary-color;
+        font-size: 8em;
+        position: absolute;
+        z-index: 0;
+    }
+}
+
+#project-details-page {
+    .grid-container {
+        grid-template-areas:
+            "image"
+            "title"
+            "excerpt";
+        
+        h2 { margin-top: 30px; }
+        p { text-align: left; }
+    }
+
+    .flex-container {
+        .container {
+            max-width: 100%;
+        }
+    }
+
+    .flex-container > div:last-child {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .grid-gallery {
+        margin-top: 30px;
+        column-gap: 10px;
+    }
+}
+
+// MEDIA QUERIES
+// Tablet > 768px
+@media (min-width: 768px) {
+    #project-details-page {
+        .flex-container {
+            .container {
+                max-width: 90%;
+                margin-left: 0;
+            }
+        }
+
+        .flex-container > {
+            div:first-child {
+                order: 2;
+            }
+
+            div:last-child {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        }
+
+        .grid-container {
+            grid-template-areas:
+                "image title title"
+                "image excerpt excerpt";
+
+            .grid-title {
+                margin-bottom: 1em;
+                
+                .tech-stack { font-size: 1.75em; }
+
+                h2 { margin-top: 0; }
+            }
+        }
+    }
+}
