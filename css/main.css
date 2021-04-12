@@ -12,7 +12,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+form label {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   color: #222;
@@ -42,7 +43,8 @@ h6 {
 
 p, figcaption,
 span,
-a {
+a,
+textarea {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #222;
@@ -298,27 +300,37 @@ section {
   z-index: 1;
 }
 
-.secondary-btn {
+.primary-btn, .secondary-btn {
   display: inline-block;
   text-decoration: none;
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   border: 3px solid #222;
-  background-color: transparent;
   padding: 5px 15px 10px;
   margin-top: 30px;
   font-size: 1.1em;
   letter-spacing: 0.15px;
+  background-color: #222;
+  color: #fff;
+}
+.primary-btn i, .secondary-btn i {
+  font-size: 1.1em;
+  margin-right: 2.5px;
+}
+.primary-btn:hover, .secondary-btn:hover {
+  color: #222;
+  background-color: #fff;
+  transition: all 0.2s ease-out 0s;
+}
+
+.secondary-btn {
+  background-color: transparent;
   color: #222;
 }
 .secondary-btn:hover {
   color: #ffe4e2;
   background-color: #222;
   transition: all 0.2s ease-out 0s;
-}
-.secondary-btn i {
-  font-size: 1.1em;
-  margin-right: 2.5px;
 }
 
 .tech-stack {
@@ -333,6 +345,18 @@ section {
 }
 .tech-stack i {
   margin: 0 5px;
+}
+
+.professional-acc i {
+  margin: 10px 5px 5px;
+  font-size: 2.85em;
+}
+.professional-acc a {
+  display: inline-block;
+  margin: 5px;
+}
+.professional-acc span {
+  display: block;
 }
 
 .highlight-link {
@@ -415,17 +439,6 @@ footer a {
 footer a:hover {
   color: #ffdbd8;
   transition: color 0.2s ease-out 0s;
-}
-footer .professional-acc i {
-  margin: 10px 5px 5px;
-  font-size: 2.85em;
-}
-footer .professional-acc a {
-  display: inline-block;
-  margin: 5px;
-}
-footer .professional-acc span {
-  display: block;
 }
 footer .alt-logo img {
   width: 100%;
@@ -516,19 +529,21 @@ footer .alt-logo span {
     font-size: 1.2em;
   }
 
-  footer .professional-acc i {
+  .professional-acc i {
     margin: 20px 10px 10px;
   }
 }
 #home-title {
-  min-height: 100vh;
+  min-height: 120vh;
   background-color: #ffdbd8;
   justify-content: space-evenly;
+  align-items: center;
 }
 #home-title h1 {
   font-size: 4em;
   line-height: 1.15em;
   margin-bottom: 20px;
+  margin-top: 50px;
 }
 #home-title span {
   display: block;
@@ -565,6 +580,7 @@ footer .alt-logo span {
 
 @media (min-width: 768px) {
   #home-title {
+    min-height: 100vh;
     justify-content: center;
   }
   #home-title h1 {
@@ -588,6 +604,10 @@ footer .alt-logo span {
   .title-img {
     width: 120%;
     height: auto;
+  }
+
+  #home-title h1 {
+    margin-top: 0;
   }
 }
 #about-title::before {
@@ -672,6 +692,72 @@ footer .alt-logo span {
   font-size: 8em;
   position: absolute;
   z-index: 0;
+}
+
+#contact-title::before {
+  content: "CONTACT ME";
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: #ffe4e2;
+  font-size: 8em;
+  position: absolute;
+  z-index: 0;
+}
+
+#contact-me .flex-container div {
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+#contact-me .flex-container a {
+  margin-top: 0;
+}
+#contact-me form {
+  text-align: left;
+}
+#contact-me form label {
+  display: block;
+  font-size: 1.5em;
+  text-align: left;
+  width: 100%;
+}
+#contact-me form sup {
+  font-family: "Open Sans", sans-serif;
+  color: #f24052;
+  font-size: 0.7em;
+}
+#contact-me form input,
+#contact-me form textarea {
+  margin-bottom: 15px;
+  border-radius: 0;
+  border: 1px solid #474747;
+  min-height: 2em;
+  font-size: 1em;
+  width: 98%;
+  padding-left: 1%;
+  padding-right: 1%;
+  outline: none;
+}
+#contact-me form input:focus,
+#contact-me form textarea:focus {
+  outline: 1px solid #222;
+}
+#contact-me form textarea {
+  padding-top: 5px;
+}
+#contact-me form .primary-btn, #contact-me form .secondary-btn {
+  padding: 15px;
+}
+
+@media (min-width: 768px) {
+  #contact-me p, #contact-me figcaption {
+    text-align: left;
+  }
+  #contact-me .flex-container div {
+    max-width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

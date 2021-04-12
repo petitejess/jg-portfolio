@@ -1,0 +1,87 @@
+// TOP PAGE
+#contact-title {
+    &::before {
+        content: 'CONTACT ME';
+        font-family: $heading-font;
+        font-weight: $heading-weight;
+        color: $secondary-color;
+        font-size: 8em;
+        position: absolute;
+        z-index: 0;
+    }
+}
+
+#contact-me {
+    .flex-container {
+        div {
+            width: 100%;
+            margin-bottom: 50px;
+            margin-top: 30px;
+        }
+
+        a {
+            margin-top: 0;
+        }
+    }
+
+    // CONTACT FORM
+    form {
+        text-align: left;
+
+        label {
+            display: block;
+            font-size: 1.5em;
+            text-align: left;
+            width: 100%;
+        }
+
+        sup {
+            font-family: $text-font;
+            color: $red-color;
+            font-size: .7em;
+        }
+
+        input,
+        textarea {
+            margin-bottom: 15px;
+            border-radius: 0;
+            border: 1px solid $grey-color;
+            min-height: 2em;
+            font-size: 1em;
+            width: 98%;
+            padding-left: 1%;
+            padding-right: 1%;
+            outline: none;
+
+            &:focus {
+                outline: 1px solid $black-color;
+            }
+        }
+
+        textarea {
+            padding-top: 5px;
+        }
+
+        .primary-btn {
+            padding: 15px;
+        }
+    }
+}
+
+// MEDIA QUERIES
+// Tablet > 768px
+@media (min-width: 768px) {
+    #contact-me {
+        p {
+            text-align: left;
+        }
+
+        .flex-container {
+            div {
+                max-width: 90%;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+    }
+}
