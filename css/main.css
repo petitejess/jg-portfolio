@@ -284,13 +284,48 @@ section {
   grid-area: excerpt;
 }
 
+.grid-article {
+  grid-area: article;
+}
+
+.grid-sidebar {
+  grid-area: sidebar;
+}
+.grid-sidebar .sidebar-title {
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #222;
+  margin-bottom: 1em;
+}
+.grid-sidebar .sidebar-title:not(:first-child) {
+  margin-top: 50px;
+}
+.grid-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.grid-sidebar ul li a {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
 .grid-footer {
   grid-area: footer;
 }
 
 .grid-container {
   display: grid;
-  grid-template-areas: "title title" "image image" "author date" "excerpt excerpt" "footer footer";
+}
+
+.grid-meta {
+  grid-template-areas: "title title" "image image" "excerpt excerpt" "footer footer";
+}
+
+.grid-post {
+  grid-template-areas: "image" "title" "article" "sidebar";
 }
 
 .grid-gallery {
@@ -493,6 +528,12 @@ footer .alt-logo span {
   margin-top: 10px;
 }
 
+@media (min-width: 540px) {
+  .grid-gallery {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+  }
+}
 @media (min-width: 768px) {
   .top-page {
     padding-top: 59px;
@@ -552,26 +593,30 @@ footer .alt-logo span {
     flex-wrap: nowrap;
   }
 
-  .grid-container {
-    grid-template-areas: "image title title" "image author date" "image excerpt excerpt" "image footer footer";
+  .grid-meta {
+    grid-template-areas: "image title title" "image excerpt excerpt" "image footer footer";
     grid-template-columns: 2fr 1fr 1fr;
     column-gap: 5%;
     text-align: left;
   }
-  .grid-container .grid-title {
+  .grid-meta .grid-title {
     margin-bottom: 1.5em;
   }
-  .grid-container .grid-title h1,
-.grid-container .grid-title h2 {
+  .grid-meta .grid-title h1,
+.grid-meta .grid-title h2 {
     margin-bottom: 0;
     text-align: left;
   }
-  .grid-container .grid-footer a {
+  .grid-meta .grid-footer a {
     margin: 0;
   }
 
+  .grid-post {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "image sidebar" "title sidebar" "article sidebar";
+  }
+
   .grid-gallery {
-    grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
   }
   .grid-gallery .flex-container > div:last-child > div {
@@ -710,7 +755,7 @@ footer .alt-logo span {
 }
 
 @media (min-width: 768px) {
-  .grid-container {
+  #about-page .grid-meta {
     grid-template-areas: "image title title" "image excerpt excerpt" "image footer footer";
   }
 
@@ -747,50 +792,29 @@ footer .alt-logo span {
   z-index: 0;
 }
 
-#project-details-page .grid-container {
-  grid-template-areas: "image" "title" "excerpt";
-}
-#project-details-page .grid-container h2 {
-  margin-top: 30px;
-}
-#project-details-page .grid-container p, #project-details-page .grid-container figcaption {
+#project-details-page #project-details-page .grid-container .grid-article h2 {
   text-align: left;
-}
-#project-details-page .flex-container .container {
-  max-width: 100%;
-}
-#project-details-page .flex-container > div:last-child {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-#project-details-page .grid-gallery {
-  margin-top: 30px;
-  column-gap: 10px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
-  #project-details-page .flex-container .container {
-    max-width: 90%;
-    margin-left: 0;
+  #project-details-page .grid-img img {
+    width: 90%;
+    float: left;
   }
-  #project-details-page .flex-container > div:first-child {
-    order: 2;
+  #project-details-page .grid-title {
+    text-align: left;
   }
-  #project-details-page .flex-container > div:last-child {
-    margin-top: 0px;
-    margin-bottom: 0px;
+  #project-details-page .grid-title h2 {
+    text-align: left;
+    margin-top: 30px;
   }
-  #project-details-page .grid-container {
-    grid-template-areas: "image title title" "image excerpt excerpt";
+  #project-details-page .grid-article div:last-child {
+    text-align: left;
   }
-  #project-details-page .grid-container .grid-title {
-    margin-bottom: 1em;
-  }
-  #project-details-page .grid-container .grid-title .tech-stack {
-    font-size: 1.75em;
-  }
-  #project-details-page .grid-container .grid-title h2 {
-    margin-top: 0;
+  #project-details-page .grid-sidebar {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 #blog-title::before {
@@ -803,6 +827,68 @@ footer .alt-logo span {
   z-index: 0;
 }
 
+#blog-post-title::before {
+  content: "THE POST TITLE";
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: #ffe4e2;
+  font-size: 8em;
+  position: absolute;
+  z-index: 0;
+}
+
+#blog-post-page .grid-container .grid-article h2 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.post-pagination .flex-container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.post-pagination a,
+.post-pagination span {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+.post-pagination a:first-child {
+  margin-bottom: 30px;
+}
+.post-pagination a:last-child {
+  margin-bottom: 100px;
+}
+.post-pagination span:nth-child(odd) {
+  color: #474747;
+}
+.post-pagination span:nth-child(even) {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+@media (min-width: 768px) {
+  #blog-post-page .grid-img img {
+    width: 90%;
+    float: left;
+  }
+  #blog-post-page .grid-sidebar {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  #blog-post-page .post-pagination a {
+    display: inline-block;
+    width: 50%;
+  }
+  #blog-post-page .post-pagination a:first-child {
+    float: left;
+    text-align: left;
+  }
+  #blog-post-page .post-pagination a:last-child {
+    float: right;
+    text-align: right;
+  }
+}
 #contact-title::before {
   content: "CONTACT ME";
   font-family: "Oswald", sans-serif;
@@ -856,6 +942,7 @@ footer .alt-logo span {
 }
 #contact-me form .primary-btn, #contact-me form .secondary-btn {
   padding: 15px;
+  font-size: 1.2em;
 }
 
 @media (min-width: 768px) {
