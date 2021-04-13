@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <title>CSS Zen Garden Challenge | Jessica Gozali Portfolio</title>
+</head>
+<body>
+    <header id="header">
+        <div id="fixed-menu">
+            <a class="skip-to-content-link secondary-btn" href="#main">
+                Skip to content
+            </a>
+
+            <!-- LOGO -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
+            </a>
+
+            <!-- HAMBURGER MENU -->
+            <input class="menu-btn" type="checkbox" id="menu-btn" aria-label="Toggle mobile navigation" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+            <!-- NAVIGATION MENU -->
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    
+        <!-- Top of Page -->
+        <div class="top-page" id="project-details-title">
+            <div class="container">
+                <!-- Page Title -->
+                <h1>CSS Zen Garden Challenge </h1>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main">
+        <section id="project-details-page">
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <ul class="breadcrumbs">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="./css-zen-garden-challenge.html">CSS Zen Garden Challenge</a></li>
+                </ul>
+
+                <!-- Uses grid container styled in main.scss and partial _projects.scss -->
+                <div class="grid-container grid-post">
+                    <div class="grid-img">
+                        <figure>
+                            <img src="../assets/projects-img/project-1-500-350.jpg" alt="">
+                        </figure>
+                    </div>
+    
+                    <div class="grid-title">
+                        <!-- Tech Stack -->
+                        <div class="tech-stack"><span class="brand-html5"><i class="fab fa-html5"></i></span><span class="brand-css3"><i class="fab fa-css3 brand-css3"></i></span></div>
+                        <span>Go to <a class="highlight-link" href="https://jessicagozali.com.au/zen-garden-challenge-jg/" target="_blank">live website</a>.</span>
+    
+                        <h2>The Power of CSS</h2>
+                        <p>A challenge that shows how CSS manipulation alone can produce a completely distinctive website looks.</p>           
+                    </div>
+    
+                    <div class="grid-article">
+                        <article>
+                            <h3>Instructions</h3>
+                            <p>All instructions for this challenge are available within the files that can be downloaded from <a href="http://csszengarden.com" target="_blank">csszengarden.com</a>.</p>
+
+                            <h3>Challenge Highlights</h3>
+                            <p>The challenge was not to touch the HTML code provided, yet we needed to create a completed and styled website. This all was done using CSS styling alone, especially using the pseudo elements <code>::before</code> and <code>::after</code> to add additional layers that can be styled.</p>
+
+                            <p>I achieved the looks on the published website by manipulating the pseudo elements <code>::before</code> and <code>::after</code>, as well as playing with the <code>position</code> property.</p>
+
+                            <h3>Image Licences</h3>
+                            <p>Images used in this project are sourced from royalty-free image stocks in <a href="https://pexels.com" target="_blank">Pexels</a> and/or <a href="https://unsplash.com" target="_blank">Unsplash</a>.</p>
+                            
+                        </article>
+        
+                        <!-- Call-to-Action -->
+                        <div><a class="secondary-btn" href="https://jessicagozali.com.au/zen-garden-challenge-jg/" target="_blank">Visit Live Website</a></div>
+                    </div>
+    
+                    <div class="grid-sidebar">
+                        <div class="alt-bg">
+                            <span class="sidebar-title">Other Projects</span>
+                            <ul>
+                                <li>
+                                    <a href="./css-zen-garden-challenge.html">
+                                        <img src="../assets/projects-img/project-1-500-350.jpg" width="50" height="50" alt="">
+                                        <div>
+                                            <span>CSS Zen Garden Challenge</span>
+                                            <span>HTML5 | CSS3</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./band-challenge.html">
+                                        <img src="../assets/projects-img/project-2-500-350.jpg" width="50" height="50" alt="">
+                                        <div>
+                                            <span>Band Challenge: Multipage Website</span>
+                                            <span>HTML5 | CSS3</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./my-life-as-a-coder.html">
+                                        <img src="../assets/projects-img/project-3-500-350.jpg" width="50" height="50" alt="">
+                                        <div>
+                                            <span>My Life as a Coder</span>
+                                            <span>HTML5 | CSS3 | Bootstrap | JS</span>
+                                        </div>    
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./elohim-church.html">
+                                        <img src="../assets/projects-img/project-4-500-350.jpg" width="50" height="50" alt="">
+                                        <div>
+                                            <span>Elohim Church</span>
+                                            <span>HTML5 | CSS3 | WP</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./webtink.html">
+                                        <img src="../assets/projects-img/project-5-500-350.jpg" width="50" height="50" alt="">
+                                        <div>
+                                            <span>Webtink</span>
+                                            <span>HTML5 | CSS3 | WP</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="container">
+                            <span class="sidebar-title">Gallery</span>
+                            <div class="grid-container grid-gallery">
+                                <figure>
+                                    <img src="../assets/posts-img/blog-post-1-500-350.jpg" width="150" height="100" alt="A pink journal, pen with golden cap and golden accessories.">
+                                </figure>
+                                <figure>
+                                    <img src="../assets/projects-img/project-1-500-350.jpg" width="150" height="100" alt="CSS Zen Garden top of website screenshot.">
+                                </figure>
+                                <figure>
+                                    <img src="../assets/posts-img/blog-post-2-500-350.jpg" width="150" height="100" alt="Computer, laptop and office chair setup at home.">
+                                </figure>
+                                <figure>
+                                    <img src="../assets/projects-img/project-2-500-350.jpg" width="150" height="100" alt="Band Challenge top of website screenshot.">
+                                </figure>
+                                <figure>
+                                    <img src="../assets/posts-img/blog-post-3-500-350.jpg" width="150" height="100" alt="Screenshot of player on Fat Moogle mount flying near Bahrr Lehs at night.">
+                                </figure>
+                                <figure>
+                                    <img src="../assets/projects-img/project-3-500-350.jpg" width="150" height="100" alt="My Life as a Coder top of website screenshot.">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <!-- Professional Accounts -->
+            <div class="professional-acc">
+                <h5>Find Me</h5>
+                <div>
+                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
+                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
+                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                </div>
+            </div>
+
+            <!-- Footer Logo -->
+            <div class="alt-logo">
+
+                <img src="../assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
+                <span>Copyright &copy; 2021 Jessica Gozali.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
