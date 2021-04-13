@@ -1,5 +1,7 @@
-// TOP PAGE
+// Top of Page
 #projects-title {
+
+    // Top of Page BG Text
     &::before {
         content: 'MY PROJECTS';
         font-family: $heading-font;
@@ -11,9 +13,20 @@
     }
 }
 
+.projects-page,
+#project-details-page {
+
+    // Override Tech Stack icon size
+    .tech-stack {
+        font-size: 1.75em;
+    }
+}
+
 // Project Details Page Styling
-// TOP PAGE
+// Top of Page
 #project-details-title {
+
+    // Top of Page BG Text
     &::before {
         content: 'THE PROJECT TITLE';
         font-family: $heading-font;
@@ -26,14 +39,29 @@
 }
 
 #project-details-page {
-    #project-details-page {
-        .grid-container {
-            .grid-article {
-                h2 {
-                    text-align: left;
-                    margin-bottom: 10px;
-                }
+
+    // Override grid container
+    .grid-post {
+        .grid-title {
+            margin-bottom: 0;
+
+            h2,
+            p { text-align: left; }
+
+            h2 {
+                margin-top: 30px;
             }
+        }
+
+        .grid-article {
+            h2 {
+                text-align: left;
+                margin-bottom: 10px;
+            }
+        }
+
+        .grid-sidebar {
+            margin-top: 100px;
         }
     }
 }
@@ -60,11 +88,6 @@
             div:last-child {
                 text-align: left;
             }
-        }
-
-        .grid-sidebar {
-            max-width: 80%;
-            margin: 0 auto;
         }
     }
 }

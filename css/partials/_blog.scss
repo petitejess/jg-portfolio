@@ -1,5 +1,7 @@
-// TOP PAGE
+// Top of Page
 #blog-title {
+
+    // Top of Page BG Text
     &::before {
         content: 'BLOG';
         font-family: $heading-font;
@@ -11,9 +13,19 @@
     }
 }
 
-// Project Details Page Styling
-// TOP PAGE
+.blog-page {
+
+    // Override grid container
+    .grid-title {
+        h2 { margin-bottom: 30px; }
+    }
+}
+
+// Blog Post Page Styling
+// Top of Page
 #blog-post-title {
+
+    // Top of Page BG Text
     &::before {
         content: 'THE POST TITLE';
         font-family: $heading-font;
@@ -26,6 +38,8 @@
 }
 
 #blog-post-page {
+
+    // Override grid container
     .grid-container {
         .grid-article {
             h2 {
@@ -34,37 +48,38 @@
             }
         }
     }
-}
 
-.post-pagination {
-    .flex-container {
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+    // Post Pagination
+    .post-pagination {
+        .flex-container {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
 
-    a,
-    span {
-        display: block;
-        width: 100%;
-        margin: 0;
-    }
+        a,
+        span {
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
 
-    a:first-child {
-        margin-bottom: 30px;
-    }
+        a:first-child {
+            margin-bottom: 30px;
+        }
 
-    a:last-child {
-        margin-bottom: 100px;
-    }
+        a:last-child {
+            margin-bottom: 100px;
+        }
 
-    span:nth-child(odd) {
-        color: $grey-color;
-    }
+        span:nth-child(odd) {
+            color: $grey-color;
+        }
 
-    span:nth-child(even) {
-        font-family: $heading-font;
-        font-weight: $heading-weight;
-        font-size: 1.5em;
+        span:nth-child(even) {
+            font-family: $heading-font;
+            font-weight: $heading-weight;
+            font-size: 1.5em;
+        }
     }
 }
 

@@ -47,7 +47,7 @@
         <!-- Top of Page -->
         <div class="top-page" id="contact-title">
             <div class="container">
-                <!-- Contact Title -->
+                <!-- Page Title -->
                 <h1>Contact Me</h1>
             </div>
         </div>
@@ -56,10 +56,14 @@
     <main id="main">
         <section id="contact-me">
             <div class="container">
+
+                <!-- Uses flexbox container styled in main.scss and partial _contact.scss -->
                 <div class="flex-container">
                     <div>
                         <p>Let me help with your next project. Ask me anything, or check out my current projects in GitHub or CodePen, or download my resume. Or, you can use the contact form to leave me a message.</p>
                         <h2>Account Links</h2>
+
+                        <!-- Professional Accounts -->
                         <div class="professional-acc">
                             <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span> GitHub</span></a>
                             <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-codepen"></i><span> CodePen</span></a>
@@ -69,14 +73,24 @@
                     </div>
                     <div>
                         <h2>Contact Form</h2>
-                        <form action="" method="" autocomplete="on">
+
+                        <!-- CONTACT FORM:
+                        Styled in main.scss and partial _contact.scss.
+                        -->
+                        <form id="contact-form" name="contact" method="POST" autocomplete="on" data-netlify="true">
+                            <!-- Name -->
                             <label for="name">Name: <sup class="required">(required)</sup></label>
                             <input type="text" name="name" id="name" placeholder="e.g. Jane Citizen" required>
+
+                            <!-- Email -->
                             <label for="email">Email: <sup class="required">(required)</sup></label>
                             <input type="email" name="email" id="email" placeholder="e.g. emailaddress@domain.com" required>
+
+                            <!-- Message -->
                             <label for="message">Message: <sup class="required">(required)</sup></label>
                             <textarea name="" id="" cols="30" rows="5" placeholder="e.g. Can you make me a custom LMS?" required></textarea>
-                            <p>By sending through this form, you confirm that you've read and accepted my <a href="#">Privacy Policy</a>.</p>
+
+                            <!-- Call-to-Action -->
                             <input class="primary-btn" type="submit" name="submit" id="submit" value="Send Message">
                         </form>
                     </div>
