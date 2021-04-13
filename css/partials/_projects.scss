@@ -28,7 +28,7 @@
 
     // Top of Page BG Text
     &::before {
-        content: 'THE PROJECT TITLE';
+        content: 'PROJECT DETAILS';
         font-family: $heading-font;
         font-weight: $heading-weight;
         color: $secondary-color;
@@ -88,6 +88,11 @@
             div:last-child {
                 text-align: left;
             }
+        }
+
+
+        .grid-post .grid-sidebar {
+            margin-top: 0;
         }
     }
 }

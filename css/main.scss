@@ -39,7 +39,8 @@ h6 { font-size: 1.1em; }
 p,
 span,
 a,
-textarea {
+textarea,
+ul li {
     font-family: $text-font;
     font-weight: $text-weight;
     color: $black-color;
@@ -74,10 +75,26 @@ abbr {
     border-bottom: 1px dashed $grey-color;
 }
 
+code {
+    background-color: $black-color;
+    color: #fff;
+    padding: 2px 5px;
+}
+
 article {
     text-align: left;
+
     h2 { margin-top: 30px; }
+
     h3, h4, h5, h6 { text-align: left; }
+
+    ul {
+        padding-left: 30px;
+        
+        li {
+            margin-bottom: 10px;
+        }
+    }
 }
 
 // Form
@@ -356,6 +373,12 @@ section {
 
 .grid-sidebar {
     grid-area: sidebar;
+    max-width: 100%;
+
+    .alt-bg {
+        padding: 30px 5%;
+    }
+
     .sidebar-title {
         display: block;
         font-family: $heading-font;
@@ -363,10 +386,6 @@ section {
         font-size: 1.5em;
         color: $black-color;
         margin-bottom: 1em;
-
-        &:not(:first-child) {
-            margin-top: 50px;
-        }
     }
 
     ul {
@@ -382,9 +401,23 @@ section {
 
         li a {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 30px;
+
+            span {
+                display: block;
+
+                &:last-child {
+                    font-size: .8em;
+                    color: $grey-color;
+                }
+            }
         }
+    }
+
+    > .container:last-child {
+        margin-top: 50px;
+        max-width: 90%;
     }
 }
 
@@ -422,6 +455,43 @@ section {
         height: auto;
     }
 }
+
+// Lightbox
+.lightbox {
+    /* Default to hidden */
+    display: none;
+  
+    /* Overlay entire screen */
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* A bit of padding around image */
+    padding: 1em;
+  
+    /* Translucent background */
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Unhide the lightbox when it's the target */
+  .lightbox:target {
+    display: block;
+  }
+  
+  .lightbox span {
+    /* Full width and height */
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    /* Size and position background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
 // Top of Page
 .top-page {
@@ -537,7 +607,7 @@ section {
 }
 
 // Alternate BG Colour
-section.alt-bg {
+.alt-bg {
     background-color: $alt-bg-color;
     max-width: 100%;
     margin: 0;
@@ -578,6 +648,7 @@ section.alt-bg {
 
     p {
         background-color: $primary-color;
+        font-size: 1.1em;
     }
 
     h2,
@@ -692,6 +763,10 @@ footer {
         padding-bottom: 100px;
     }
 
+    .container {
+        max-width: 80%;
+    }
+
     .flex-container {
         flex-wrap: nowrap;
     }
@@ -726,11 +801,13 @@ footer {
         "image sidebar"
         "title sidebar"
         "article sidebar";
+        column-gap: 30px;
     }
 
     .grid-sidebar {
-        max-width: 80%;
-        margin: 0 auto;
+        .alt-bg {
+            padding: 30px 10%;
+        }
     }
 
     .grid-gallery {
@@ -751,6 +828,13 @@ footer {
             i {
                 margin: 20px 10px 10px;
             }
+    }
+}
+
+// Desktop > 1200px
+@media (min-width: 1200px) {
+    .container {
+        max-width: 70%;
     }
 }
 
