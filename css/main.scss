@@ -69,13 +69,60 @@ a {
     }
 }
 
+abbr {
+    text-decoration: none;
+    border-bottom: 1px dashed $grey-color;
+}
+
 article {
     text-align: left;
     h2 { margin-top: 30px; }
     h3, h4, h5, h6 { text-align: left; }
 }
 
-// HEADER and NAV MENU
+// Form
+form {
+    text-align: left;
+
+    .required {
+        font-family: $text-font;
+        color: $red-color;
+        font-size: .7em;
+    }
+
+    input,
+    textarea {
+        margin-bottom: 15px;
+        border-radius: 0;
+        border: 1px solid $grey-color;
+        min-height: 2em;
+        font-size: 1em;
+        width: 98%;
+        padding-left: 1%;
+        padding-right: 1%;
+        outline: none;
+
+        &:focus {
+            outline: 1px solid $black-color;
+        }
+    }
+
+    textarea {
+        padding-top: 5px;
+    }
+}
+
+// Highlight links
+.highlight-link {
+    background-color: $accent-light-color;
+
+    &:hover {
+        background-color: $secondary-color;
+        transition: background-color .2s ease-out 0s;
+    }
+}
+
+// HEADER
 #header {
     background-color: $primary-color;
     width: 100%;
@@ -239,7 +286,7 @@ section {
     text-align: center;
 }
 
-// flexbox
+// Flexbox container
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -251,7 +298,7 @@ section {
     }
 }
 
-// grid
+// Grid container
 .grid-title {
     grid-area: title;
     margin-bottom: 1.5em;
@@ -326,6 +373,13 @@ section {
         list-style: none;
         padding: 0;
 
+        > li {
+            text-align: left;
+            span {
+                padding-left: 10px;
+            }
+        }
+
         li a {
             display: flex;
             align-items: flex-start;
@@ -369,7 +423,7 @@ section {
     }
 }
 
-// TOP PAGE
+// Top of Page
 .top-page {
     position: relative;
     padding-top: 80px;
@@ -388,7 +442,7 @@ section {
     }
 }
 
-// BREADCRUMBS
+// Breadcrumbs
 .breadcrumbs {
     text-align: left;
     margin-bottom: 2em;
@@ -414,7 +468,7 @@ section {
     }
 }
 
-// BUTTONS
+// Call-to-Action
 .primary-btn {
     display: inline-block;
     text-decoration: none;
@@ -453,50 +507,43 @@ section {
     }
 }
 
-// TECH STACK ICONS
+// Tech Stack Icons
 .tech-stack {
     font-size: 2.75em;
     padding: 5px 0;
     .brand-html5 { color: #e34c26; }
     .brand-css3 { color: #264de4; }
+    .brand-bootstrap { color: #602c50; }
+    .brand-js { color: #f0db4f; }
+    .brand-wp { color: #21759b; }
     i {
         margin: 0 5px;
     }
 }
 
-// PROFESSIONAL ACCOUNTS
+// Professional Accounts
 .professional-acc {
     i {
         margin: 10px 5px 5px;
-        font-size: 2.85em;
+        font-size: 2.2em;
     }
 
     a { 
         display: inline-block;
-        margin: 5px;
+        margin: 10px;
     }
 
     span { display: block; }
 }
 
-// HIGHLIGHT LINKS
-.highlight-link {
-    background-color: $accent-light-color;
-
-    &:hover {
-        background-color: $secondary-color;
-        transition: background-color .2s ease-out 0s;
-    }
-}
-
-// ALTERNATE BG COLOUR
+// Alternate BG Colour
 section.alt-bg {
     background-color: $alt-bg-color;
     max-width: 100%;
     margin: 0;
 }
 
-// PICTURE BG
+// Picture BG
 .picture-bg {
     position: relative;
     background-color: $primary-color;
@@ -559,6 +606,7 @@ footer {
         transition: color .2s ease-out 0s;
     }
 
+    // Footer Logo
     .alt-logo {
         img {
             width: 100%;
@@ -678,6 +726,11 @@ footer {
         "image sidebar"
         "title sidebar"
         "article sidebar";
+    }
+
+    .grid-sidebar {
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     .grid-gallery {

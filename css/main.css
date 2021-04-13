@@ -72,6 +72,11 @@ a:focus {
   outline: 2px dotted #f24052;
 }
 
+abbr {
+  text-decoration: none;
+  border-bottom: 1px dashed #474747;
+}
+
 article {
   text-align: left;
 }
@@ -80,6 +85,42 @@ article h2 {
 }
 article h3, article h4, article h5, article h6 {
   text-align: left;
+}
+
+form {
+  text-align: left;
+}
+form .required {
+  font-family: "Open Sans", sans-serif;
+  color: #f24052;
+  font-size: 0.7em;
+}
+form input,
+form textarea {
+  margin-bottom: 15px;
+  border-radius: 0;
+  border: 1px solid #474747;
+  min-height: 2em;
+  font-size: 1em;
+  width: 98%;
+  padding-left: 1%;
+  padding-right: 1%;
+  outline: none;
+}
+form input:focus,
+form textarea:focus {
+  outline: 1px solid #222;
+}
+form textarea {
+  padding-top: 5px;
+}
+
+.highlight-link {
+  background-color: #fff3e0;
+}
+.highlight-link:hover {
+  background-color: #ffe4e2;
+  transition: background-color 0.2s ease-out 0s;
 }
 
 #header, #fixed-menu {
@@ -306,6 +347,12 @@ section {
   list-style: none;
   padding: 0;
 }
+.grid-sidebar ul > li {
+  text-align: left;
+}
+.grid-sidebar ul > li span {
+  padding-left: 10px;
+}
 .grid-sidebar ul li a {
   display: flex;
   align-items: flex-start;
@@ -419,28 +466,29 @@ section {
 .tech-stack .brand-css3 {
   color: #264de4;
 }
+.tech-stack .brand-bootstrap {
+  color: #602c50;
+}
+.tech-stack .brand-js {
+  color: #f0db4f;
+}
+.tech-stack .brand-wp {
+  color: #21759b;
+}
 .tech-stack i {
   margin: 0 5px;
 }
 
 .professional-acc i {
   margin: 10px 5px 5px;
-  font-size: 2.85em;
+  font-size: 2.2em;
 }
 .professional-acc a {
   display: inline-block;
-  margin: 5px;
+  margin: 10px;
 }
 .professional-acc span {
   display: block;
-}
-
-.highlight-link {
-  background-color: #fff3e0;
-}
-.highlight-link:hover {
-  background-color: #ffe4e2;
-  transition: background-color 0.2s ease-out 0s;
 }
 
 section.alt-bg {
@@ -616,6 +664,11 @@ footer .alt-logo span {
     grid-template-areas: "image sidebar" "title sidebar" "article sidebar";
   }
 
+  .grid-sidebar {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
   .grid-gallery {
     text-align: center;
   }
@@ -657,8 +710,7 @@ footer .alt-logo span {
   position: absolute;
   z-index: 0;
 }
-
-.title-img {
+#home-title .title-img {
   width: 100%;
   height: auto;
 }
@@ -666,14 +718,14 @@ footer .alt-logo span {
 #recent-projects .flex-container > div {
   margin-bottom: 70px;
 }
-#recent-projects .flex-container div {
-  width: 100%;
-}
 #recent-projects img {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
   box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.15);
+}
+#recent-projects .tech-stack {
+  font-size: 1.75em;
 }
 
 @media (min-width: 768px) {
@@ -716,6 +768,10 @@ footer .alt-logo span {
   font-size: 8em;
   position: absolute;
   z-index: 0;
+}
+
+#about-page .grid-excerpt p, #about-page .grid-excerpt figcaption {
+  text-align: left;
 }
 
 #key-skills img {
@@ -782,6 +838,11 @@ footer .alt-logo span {
   z-index: 0;
 }
 
+.projects-page .tech-stack,
+#project-details-page .tech-stack {
+  font-size: 1.75em;
+}
+
 #project-details-title::before {
   content: "THE PROJECT TITLE";
   font-family: "Oswald", sans-serif;
@@ -792,9 +853,23 @@ footer .alt-logo span {
   z-index: 0;
 }
 
-#project-details-page #project-details-page .grid-container .grid-article h2 {
+#project-details-page .grid-post .grid-title {
+  margin-bottom: 0;
+}
+#project-details-page .grid-post .grid-title h2,
+#project-details-page .grid-post .grid-title p,
+#project-details-page .grid-post .grid-title figcaption {
+  text-align: left;
+}
+#project-details-page .grid-post .grid-title h2 {
+  margin-top: 30px;
+}
+#project-details-page .grid-post .grid-article h2 {
   text-align: left;
   margin-bottom: 10px;
+}
+#project-details-page .grid-post .grid-sidebar {
+  margin-top: 100px;
 }
 
 @media (min-width: 768px) {
@@ -812,10 +887,6 @@ footer .alt-logo span {
   #project-details-page .grid-article div:last-child {
     text-align: left;
   }
-  #project-details-page .grid-sidebar {
-    max-width: 80%;
-    margin: 0 auto;
-  }
 }
 #blog-title::before {
   content: "BLOG";
@@ -825,6 +896,10 @@ footer .alt-logo span {
   font-size: 8em;
   position: absolute;
   z-index: 0;
+}
+
+.blog-page .grid-title h2 {
+  margin-bottom: 30px;
 }
 
 #blog-post-title::before {
@@ -841,27 +916,26 @@ footer .alt-logo span {
   text-align: left;
   margin-bottom: 10px;
 }
-
-.post-pagination .flex-container {
+#blog-post-page .post-pagination .flex-container {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.post-pagination a,
-.post-pagination span {
+#blog-post-page .post-pagination a,
+#blog-post-page .post-pagination span {
   display: block;
   width: 100%;
   margin: 0;
 }
-.post-pagination a:first-child {
+#blog-post-page .post-pagination a:first-child {
   margin-bottom: 30px;
 }
-.post-pagination a:last-child {
+#blog-post-page .post-pagination a:last-child {
   margin-bottom: 100px;
 }
-.post-pagination span:nth-child(odd) {
+#blog-post-page .post-pagination span:nth-child(odd) {
   color: #474747;
 }
-.post-pagination span:nth-child(even) {
+#blog-post-page .post-pagination span:nth-child(even) {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   font-size: 1.5em;
@@ -899,53 +973,34 @@ footer .alt-logo span {
   z-index: 0;
 }
 
+#contact-me {
+  padding-top: 50px;
+}
 #contact-me .flex-container div {
   width: 100%;
   margin-bottom: 50px;
+}
+#contact-me .flex-container div:last-child {
   margin-top: 30px;
 }
 #contact-me .flex-container a {
   margin-top: 0;
 }
-#contact-me form {
-  text-align: left;
-}
-#contact-me form label {
+#contact-me #contact-form label {
   display: block;
   font-size: 1.5em;
   text-align: left;
   width: 100%;
 }
-#contact-me form sup {
-  font-family: "Open Sans", sans-serif;
-  color: #f24052;
-  font-size: 0.7em;
-}
-#contact-me form input,
-#contact-me form textarea {
-  margin-bottom: 15px;
-  border-radius: 0;
-  border: 1px solid #474747;
-  min-height: 2em;
-  font-size: 1em;
-  width: 98%;
-  padding-left: 1%;
-  padding-right: 1%;
-  outline: none;
-}
-#contact-me form input:focus,
-#contact-me form textarea:focus {
-  outline: 1px solid #222;
-}
-#contact-me form textarea {
-  padding-top: 5px;
-}
-#contact-me form .primary-btn, #contact-me form .secondary-btn {
+#contact-me #contact-form .primary-btn, #contact-me #contact-form .secondary-btn {
   padding: 15px;
   font-size: 1.2em;
 }
 
 @media (min-width: 768px) {
+  #contact-me {
+    padding-top: 70px;
+  }
   #contact-me p, #contact-me figcaption {
     text-align: left;
   }
@@ -953,6 +1008,9 @@ footer .alt-logo span {
     max-width: 90%;
     padding-left: 5%;
     padding-right: 5%;
+  }
+  #contact-me .flex-container div:first-child {
+    margin-top: 30px;
   }
 }
 

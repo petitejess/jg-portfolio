@@ -1,5 +1,7 @@
-// TOP PAGE
+// Top of Page
 #about-title {
+
+    // Top of Page BG Text
     &::before {
         content: 'ABOUT ME';
         font-family: $heading-font;
@@ -11,13 +13,24 @@
     }
 }
 
+#about-page {
+    // Override grid container
+    .grid-excerpt {
+        p {
+            text-align: left;
+        }
+    }
+}
+
 // KEY SKILLS
 #key-skills {
+    // Icon pictures
     img {
         width: 3em;
         height: 3em;
     }
 
+    // Override flexbox container
     .flex-container {
 
         .flex-container {
@@ -25,7 +38,8 @@
             align-items: flex-start;
             flex-wrap: wrap;
             margin-bottom: 30px;
-    
+            
+            // Icon picture texts
             span {
                 display: inline-block;
                 flex: 1;
@@ -41,6 +55,8 @@
 
 // EDUCATIONS & EXPERIENCE
 #edu-exp {
+
+    // Override flexbox container
     .flex-container {
         div {
             width: 100%;

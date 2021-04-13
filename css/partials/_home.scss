@@ -1,23 +1,24 @@
-// TOP PAGE
+// Top of Page
 #home-title {
     min-height: 120vh;
     background-color: $primary-color;
     justify-content: space-evenly;
     align-items: center;
 
+    // Page Title
     h1 {
         font-size: 4em;
         line-height: 1.15em;
         margin-bottom: 20px;
         margin-top: 50px;
     }
-
     span {
         display: block;
         font-size: 1.5em;
         font-weight: 300;
     }
 
+    // Top of Page BG Text
     &::before {
         content: 'JESSICAGOZALI';
         font-family: $heading-font;
@@ -27,22 +28,22 @@
         position: absolute;
         z-index: 0;
     }
-}
 
-.title-img {
-    width: 100%;
-    height: auto;
+    // Top Image
+    .title-img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 // RECENT PROJECTS
+// Recent Project Tile
 #recent-projects {
-    .flex-container > div {
-        margin-bottom: 70px;
-    }
 
-    .flex-container {        
-        div {
-            width: 100%;
+    // Overrides main.scss to adjust spacing between Project Tiles on small screens
+    .flex-container {     
+        > div {
+            margin-bottom: 70px;
         }
     }
 
@@ -51,6 +52,11 @@
         height: auto;
         margin-bottom: 10px;
         @include box-shadow;
+    }
+
+    // Tech Stack
+    .tech-stack {
+            font-size: 1.75em;
     }
 }
 
