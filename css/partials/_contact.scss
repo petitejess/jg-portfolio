@@ -33,6 +33,19 @@
         a {
             margin-top: 0;
         }
+
+        .professional-acc {
+            i {
+                margin: 0;
+                padding: 10px;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: $primary-color;
+                    transition: background-color .2s ease-in-out;
+                }
+            }
+        }
     }
 
     // CONTACT FORM
@@ -48,6 +61,7 @@
         .primary-btn {
             padding: 15px;
             font-size: 1.2em;
+            width: 100%;
         }
     }
 }

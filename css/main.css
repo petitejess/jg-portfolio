@@ -14,7 +14,7 @@ h4,
 h5,
 h6,
 form label {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   color: #222;
   text-align: center;
@@ -46,7 +46,7 @@ span,
 a,
 textarea,
 ul li {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   color: #222;
 }
@@ -92,9 +92,12 @@ article h2 {
 }
 article h3, article h4, article h5, article h6 {
   text-align: left;
+  margin-bottom: 10px;
 }
 article ul {
   padding-left: 30px;
+  margin-top: -10px;
+  margin-bottom: 1.5em;
 }
 article ul li {
   margin-bottom: 10px;
@@ -104,7 +107,7 @@ form {
   text-align: left;
 }
 form .required {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   color: #f24052;
   font-size: 0.7em;
 }
@@ -187,7 +190,7 @@ form textarea {
   display: block;
   padding: 20px 20px;
   text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   font-size: 1.25em;
   letter-spacing: 0.15px;
@@ -351,7 +354,7 @@ section {
 }
 .grid-sidebar .sidebar-title {
   display: block;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   font-size: 1.5em;
   color: #222;
@@ -483,7 +486,7 @@ section {
 .primary-btn, .secondary-btn {
   display: inline-block;
   text-decoration: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   border: 3px solid #222;
   padding: 5px 15px 10px;
@@ -770,7 +773,7 @@ footer .alt-logo span {
 }
 #home-title::before {
   content: "JESSICAGOZALI";
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   color: #ffe4e2;
   font-size: 30em;
@@ -818,18 +821,26 @@ footer .alt-logo span {
   }
 }
 @media (min-width: 1024px) {
-  .title-img {
-    width: 120%;
-    height: auto;
-  }
-
   #home-title h1 {
     margin-top: 0;
+  }
+  #home-title .title-img {
+    width: 110%;
+    height: auto;
+  }
+}
+@media (min-width: 1600px) {
+  #home-title h1 {
+    font-size: 7em;
+  }
+  #home-title .title-img {
+    width: 150%;
+    height: auto;
   }
 }
 #about-title::before {
   content: "ABOUT ME";
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   color: #ffe4e2;
   font-size: 8em;
@@ -897,7 +908,7 @@ footer .alt-logo span {
 }
 #projects-title::before {
   content: "MY PROJECTS";
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   color: #ffe4e2;
   font-size: 8em;
@@ -912,7 +923,7 @@ footer .alt-logo span {
 
 #project-details-title::before {
   content: "PROJECT DETAILS";
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   color: #ffe4e2;
   font-size: 8em;
@@ -960,7 +971,7 @@ footer .alt-logo span {
 }
 #blog-title::before {
   content: "BLOG";
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   color: #ffe4e2;
   font-size: 8em;
@@ -974,7 +985,7 @@ footer .alt-logo span {
 
 #blog-post-title::before {
   content: "BLOG POST";
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   color: #ffe4e2;
   font-size: 8em;
@@ -988,7 +999,9 @@ footer .alt-logo span {
 }
 #blog-post-page .post-pagination .flex-container {
   justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 #blog-post-page .post-pagination a,
 #blog-post-page .post-pagination span {
@@ -1006,7 +1019,7 @@ footer .alt-logo span {
   color: #474747;
 }
 #blog-post-page .post-pagination span:nth-child(even) {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   font-size: 1.5em;
 }
@@ -1015,10 +1028,6 @@ footer .alt-logo span {
   #blog-post-page .grid-img img {
     width: 90%;
     float: left;
-  }
-  #blog-post-page .grid-sidebar {
-    max-width: 80%;
-    margin: 0 auto;
   }
   #blog-post-page .post-pagination a {
     display: inline-block;
@@ -1031,11 +1040,12 @@ footer .alt-logo span {
   #blog-post-page .post-pagination a:last-child {
     float: right;
     text-align: right;
+    margin-bottom: 30px;
   }
 }
 #contact-title::before {
   content: "CONTACT ME";
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   color: #ffe4e2;
   font-size: 8em;
@@ -1056,6 +1066,15 @@ footer .alt-logo span {
 #contact-me .flex-container a {
   margin-top: 0;
 }
+#contact-me .flex-container .professional-acc i {
+  margin: 0;
+  padding: 10px;
+  background-color: transparent;
+}
+#contact-me .flex-container .professional-acc i:hover {
+  background-color: #ffdbd8;
+  transition: background-color 0.2s ease-in-out;
+}
 #contact-me #contact-form label {
   display: block;
   font-size: 1.5em;
@@ -1065,6 +1084,7 @@ footer .alt-logo span {
 #contact-me #contact-form .primary-btn, #contact-me #contact-form .secondary-btn {
   padding: 15px;
   font-size: 1.2em;
+  width: 100%;
 }
 
 @media (min-width: 768px) {

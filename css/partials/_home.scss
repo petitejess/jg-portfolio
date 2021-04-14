@@ -93,12 +93,24 @@
 
 // Desktop > 1024px
 @media (min-width: 1024px) {
-    .title-img {
-        width: 120%;
-        height: auto;
-    }
-
     #home-title {
         h1 { margin-top: 0; }
+        
+        .title-img {
+            width: 110%;
+            height: auto;
+        }
+    }
+}
+
+// XL Screen > 1600px
+@media (min-width: 1600px) {
+    #home-title {
+        h1 { font-size: 7em; }
+        
+        .title-img {
+            width: 150%;
+            height: auto;
+        }
     }
 }
