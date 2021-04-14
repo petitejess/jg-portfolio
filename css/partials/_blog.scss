@@ -53,7 +53,9 @@
     .post-pagination {
         .flex-container {
             justify-content: space-between;
+            align-items: flex-start;
             flex-wrap: wrap;
+            margin-top: 50px;
         }
 
         a,
@@ -91,11 +93,6 @@
             width: 90%;
             float: left;
         }
-        
-        .grid-sidebar {
-            max-width: 80%;
-            margin: 0 auto;
-        }
 
         .post-pagination {
             a {
@@ -110,6 +107,7 @@
                 &:last-child {
                     float: right;
                     text-align: right;
+                    margin-bottom: 30px;
                 }
             }
         }

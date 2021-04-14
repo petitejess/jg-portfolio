@@ -86,10 +86,15 @@ article {
 
     h2 { margin-top: 30px; }
 
-    h3, h4, h5, h6 { text-align: left; }
+    h3, h4, h5, h6 {
+        text-align: left;
+        margin-bottom: 10px;
+    }
 
     ul {
         padding-left: 30px;
+        margin-top: -10px;
+        margin-bottom: 1.5em;
         
         li {
             margin-bottom: 10px;
