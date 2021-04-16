@@ -41,6 +41,9 @@
 }
 
 #blog-post-page {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
 
     // Override grid container
     .grid-container {
@@ -104,6 +107,9 @@
 // Tablet > 768px
 @media (min-width: 768px) {
     #blog-post-page {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        
         .grid-img img {
             width: 90%;
             float: left;
