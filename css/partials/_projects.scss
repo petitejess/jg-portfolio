@@ -1,12 +1,13 @@
-// Top of Page
+/*
+  COMPONENT: Text: Top of Page
+*/
 #projects-title {
-
     // Top of Page BG Text
     &::before {
         content: 'MY PROJECTS';
         font-family: $heading-font;
         font-weight: $heading-weight;
-        color: $secondary-color;
+        color: $main-light-color;
         font-size: 8em;
         position: absolute;
         z-index: 0;
@@ -31,7 +32,7 @@
         content: 'PROJECT DETAILS';
         font-family: $heading-font;
         font-weight: $heading-weight;
-        color: $secondary-color;
+        color: $main-light-color;
         font-size: 8em;
         position: absolute;
         z-index: 0;
@@ -53,6 +54,9 @@
             }
         }
 
+        /*
+            COMPONENT: Text: Article
+        */
         .grid-article {
             h2 {
                 text-align: left;
@@ -84,6 +88,9 @@
             }
         }
 
+        /*
+            COMPONENT: Text: Article
+        */
         .grid-article {
             div:last-child {
                 text-align: left;

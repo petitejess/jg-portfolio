@@ -1,12 +1,13 @@
-// Top of Page
+/*
+  COMPONENT: Text: Top of Page
+*/
 #about-title {
-
     // Top of Page BG Text
     &::before {
         content: 'ABOUT ME';
         font-family: $heading-font;
         font-weight: $heading-weight;
-        color: $secondary-color;
+        color: $main-light-color;
         font-size: 8em;
         position: absolute;
         z-index: 0;
@@ -24,12 +25,27 @@
 
 // KEY SKILLS
 #key-skills {
-    // Icon pictures
-    img {
-        width: 3em;
-        height: 3em;
-    }
+    /*
+        COMPONENT: Image: SVG Icon
+    */
+    .svg-icon {
+        img {
+            width: 3em;
+            height: 3em;
+        }
 
+        // Icon picture texts
+        span {
+            display: inline-block;
+            flex: 1;
+            margin: 20px 5px 10px;
+
+            .icon-text {
+                display: block;
+            }
+        }
+    }
+    
     // Override flexbox container
     .flex-container {
 
@@ -38,24 +54,12 @@
             align-items: flex-start;
             flex-wrap: wrap;
             margin-bottom: 30px;
-            
-            // Icon picture texts
-            span {
-                display: inline-block;
-                flex: 1;
-                margin: 20px 5px 10px;
-
-                .icon-text {
-                    display: block;
-                }
-            }
         }
     }
 }
 
 // EDUCATIONS & EXPERIENCE
 #edu-exp {
-
     // Override flexbox container
     .flex-container {
         div {
@@ -93,6 +97,7 @@
     }
     
     #key-skills {
+        // Override flexbox container
         .flex-container {
             flex-wrap: wrap;
 

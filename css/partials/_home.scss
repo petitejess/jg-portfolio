@@ -1,7 +1,9 @@
-// Top of Page
+/*
+  COMPONENT: Text: Top of Page
+*/
 #home-title {
     min-height: 120vh;
-    background-color: $primary-color;
+    background-color: $main-color;
     justify-content: space-evenly;
     align-items: center;
 
@@ -23,7 +25,7 @@
         content: 'JESSICAGOZALI';
         font-family: $heading-font;
         font-weight: $heading-weight;
-        color: $secondary-color;
+        color: $main-light-color;
         font-size: 30em;
         position: absolute;
         z-index: 0;
@@ -36,33 +38,38 @@
     }
 }
 
-// RECENT PROJECTS
-// Recent Project Tile
+/*
+    COMPONENT: Image: Card Container
+*/
 #recent-projects {
-
-    // Overrides main.scss to adjust spacing between Project Tiles on small screens
-    .flex-container {     
+    .card-container {     
         > div {
             margin-bottom: 70px;
         }
-    }
 
-    img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-        @include box-shadow;
-    }
+        // Card Image
+        .card a {
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+                @include box-shadow;
+            }
+        }
 
-    // Tech Stack
-    .tech-stack {
-            font-size: 1.75em;
+        // Tech Stack
+        .tech-stack {
+        font-size: 1.75em;
+        }
     }
 }
 
 // MEDIA QUERIES
 // Tablet > 768px
 @media (min-width: 768px) {
+    /*
+        COMPONENT: Text: Top of Page
+    */
     #home-title {
         min-height: 100vh;
         justify-content: center;
@@ -80,11 +87,15 @@
         }
     }
 
+    /*
+        COMPONENT: Image: Card Container
+    */
     #recent-projects {
-        .flex-container {
+        .card-container {
             margin-top: 70px;
         }
 
+        // Card Image
         img {
             max-width: 90%;
         }
@@ -93,6 +104,9 @@
 
 // Desktop > 1024px
 @media (min-width: 1024px) {
+    /*
+        COMPONENT: Text: Top of Page
+    */
     #home-title {
         h1 { margin-top: 0; }
         
@@ -103,8 +117,37 @@
     }
 }
 
+
+// iPad Pro Portrait
+@media (width: 1024px) and (orientation: portrait) {
+    /*
+        COMPONENT: Text: Top of Page
+    */
+    #home-title {
+        flex-wrap: wrap;
+
+        h1 {
+            font-size: 7em;
+            margin-top: 10vh;
+        }
+    }
+}
+
+// L Screen > 1200px
+@media (min-width: 1200px) {
+    /*
+        COMPONENT: Text: Top of Page
+    */
+    #home-title {
+        h1 { font-size: 5.5em; }
+    }
+}
+
 // XL Screen > 1600px
 @media (min-width: 1600px) {
+    /*
+        COMPONENT: Text: Top of Page
+    */
     #home-title {
         h1 { font-size: 7em; }
         

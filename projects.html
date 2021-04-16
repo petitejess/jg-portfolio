@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <meta name="theme-color" content="#ffdbd8">
+    <meta name="author" content="Jessica Gozali">
+    <meta name="description" content="A website containing profile information and project portfolio of Jessica Gozali, a petite Front-End developer.">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png"/>
 
@@ -20,21 +24,28 @@
 </head>
 <body>
     <header id="header">
+
+        <!-- 
+            COMPONENT: Text: Navigation Menu
+            Hamburger menu display breakpoint 768px. Styled in main.scss
+        -->
         <div id="fixed-menu">
+
+            <!-- Skip to Content Link (default: off-screen, on focus: on-screen)-->
             <a class="skip-to-content-link secondary-btn" href="#main">
                 Skip to content
             </a>
 
-            <!-- LOGO -->
+            <!-- Logo -->
             <a href="./index.html" class="logo">
                 <img src="./assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
             </a>
 
-            <!-- HAMBURGER MENU -->
+            <!-- Hamburger Menu -->
             <input class="menu-btn" type="checkbox" id="menu-btn" aria-label="Toggle mobile navigation" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
-            <!-- NAVIGATION MENU -->
+            <!-- Navigation Links -->
             <ul class="menu">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -43,14 +54,19 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
+        <!-- End COMPONENT: Text: Navigation Menu -->
 
-        <!-- Top of Page -->
+        <!-- 
+            COMPONENT: Text: Top of Page
+            Styled in main.scss. Except Home page overridden in /partials/_home.scss. ::before in respective partials.
+        -->
         <div class="top-page" id="projects-title">
             <div class="container">
                 <!-- Page Title -->
                 <h1>My Projects</h1>
             </div>
         </div>
+        <!-- End COMPONENT: Text: Top of Page -->
     </header>
 
     <main id="main" class="projects-page">
@@ -69,9 +85,14 @@
                         <span>Go to <a class="highlight-link" href="https://jessicagozali.com.au/zen-garden-challenge-jg/" target="_blank">live website</a>.</span>
                     </div>
     
+                    <!-- 
+                        COMPONENT: Image: Post Picture
+                        Contains image related to other component under the same .grid-container parent element. Using grid base (main.scss).
+                    -->
                     <figure class="grid-img">
                         <img src="./assets/projects-img/project-1-500-350.jpg" width="800" height="550" alt="CSS Zen Garden Thumbnail">
                     </figure>
+                    <!-- End COMPONENT: Image: Post Picture -->
     
                     <div class="grid-excerpt">
                         <p>A challenge that shows how CSS manipulation alone can produce completely distinctive website looks.</p>
@@ -98,9 +119,14 @@
                         <span>Go to <a class="highlight-link" href="https://jessicagozali.com.au/band-challenge-jg/" target="_blank">live website</a>.</span>
                     </div>
     
+                    <!-- 
+                        COMPONENT: Image: Post Picture
+                        Contains image related to other component under the same .grid-container parent element. Using grid base (main.scss).
+                    -->
                     <figure class="grid-img">
                         <img src="./assets/projects-img/project-2-500-350.jpg" width="800" height="550" alt="Band Challenge Thumbnail">
                     </figure>
+                    <!-- End COMPONENT: Image: Post Picture -->
     
                     <div class="grid-excerpt">
                         <p>A challenge to create basic multipage website from scratch. Learn to use semantic HTML tags, use background image, etc.</p>
@@ -128,9 +154,14 @@
                         <span>Go to <a class="highlight-link" href="https://jessica.webtink.com.au" target="_blank">live website</a>.</span>
                     </div>
     
+                    <!-- 
+                        COMPONENT: Image: Post Picture
+                        Contains image related to other component under the same .grid-container parent element. Using grid base (main.scss).
+                    -->
                     <figure class="grid-img">
                         <img src="./assets/projects-img/project-3-500-350.jpg" width="800" height="550" alt="My Life as a Coder Thumbnail">
                     </figure>
+                    <!-- End COMPONENT: Image: Post Picture -->
     
                     <div class="grid-excerpt">
                         <p>A little story about my life as a coder. The website shows how we can use CSS to create shapes and animations. It also has a prototype of a browser game (currently only viewable in desktop) made using JavaScript library.</p>
@@ -156,10 +187,15 @@
                         <div class="tech-stack"><span class="brand-html5"><i class="fab fa-html5"></i></span><span class="brand-css3"><i class="fab fa-css3"></i></span><span class="brand-wp"><i class="fab fa-wordpress"></i></span></div>
                         <span>Go to <a class="highlight-link" href="https://elohimchurch.org.au" target="_blank">live website</a>.</span>
                     </div>
-    
+                    
+                    <!-- 
+                        COMPONENT: Image: Post Picture
+                        Contains image related to other component under the same .grid-container parent element. Using grid base (main.scss).
+                    -->
                     <figure class="grid-img">
                         <img src="./assets/projects-img/project-4-500-350.jpg" width="800" height="550" alt="Elohim Church Thumbnail">
                     </figure>
+                    <!-- End COMPONENT: Image: Post Picture -->
     
                     <div class="grid-excerpt">
                         <p>A responsive WordPress website made for client. It is a static multipage website with a contact form.</p>
@@ -187,9 +223,14 @@
                         <span>Go to <a class="highlight-link" href="https://webtink.com.au" target="_blank">live website</a>.</span>
                     </div>
     
+                    <!-- 
+                        COMPONENT: Image: Post Picture
+                        Contains image related to other component under the same .grid-container parent element. Using grid base (main.scss).
+                    -->
                     <figure class="grid-img">
                         <img src="./assets/projects-img/project-5-500-350.jpg" width="800" height="550" alt="Webtink Thumbnail">
                     </figure>
+                    <!-- End COMPONENT: Image: Post Picture -->
     
                     <div class="grid-excerpt">
                         <p>A responsive WordPress website made as a shop front website when I was working as a freelancer, providing WordPress and OpenCart website development, as well as domain name registration and hosting services.</p>
@@ -208,17 +249,17 @@
         <div class="container">
             <!-- Professional Accounts -->
             <div class="professional-acc">
-                <h5>Find Me</h5>
+                <span>Find Me</span>
                 <div>
-                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
-                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
-                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                    <a href="https://github.com/petitejess" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a>
+                    <a href="https://www.freecodecamp.org/petitejess" target="_blank" rel="noreferrer"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
+                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
                 </div>
             </div>
 
             <!-- Footer Logo -->
             <div class="alt-logo">
-                <img src="./assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
+                <img src="./assets/jessica-gozali-footer-logo-512-259.png" width="100" height="50" alt="Jessica Gozali Footer Logo">
                 <span>Copyright &copy; 2021 Jessica Gozali.</span>
             </div>
         </div>

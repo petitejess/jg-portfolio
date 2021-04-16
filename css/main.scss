@@ -102,7 +102,7 @@ article {
     }
 }
 
-// Form
+// FORM
 form {
     text-align: left;
 
@@ -134,24 +134,27 @@ form {
     }
 }
 
-// Highlight links
+// HIGHLIGHT LINKS
 .highlight-link {
     background-color: $accent-light-color;
+    transition: background-color .2s ease-out;
 
     &:hover {
-        background-color: $secondary-color;
-        transition: background-color .2s ease-out 0s;
+        background-color: $main-light-color;
+        transition: background-color .2s ease-out;
     }
 }
 
 // HEADER
 #header {
-    background-color: $primary-color;
+    background-color: $main-color;
     width: 100%;
     overflow-x: hidden;
 }
 
-// NAVIGATION MENU
+/*
+    COMPONENT: Text: Navigation Menu
+*/
 #fixed-menu {
     @extend #header;
     overflow-x: visible;
@@ -160,13 +163,15 @@ form {
     z-index: 3;
     @include gold-strip(top);
 
+    // Skip to Content Link
     .skip-to-content-link {
         position: absolute;
         left: 50%;
         margin-top: 0;
-        background-color: $primary-color;
+        background-color: $main-color;
         @include box-shadow;
         transform: translateY(-200%);
+        transition: background-color .2s ease-out;
 
         &:focus {
             transform: translateY(150%);
@@ -174,52 +179,22 @@ form {
 
         &:hover {
             background-color: $black-color;
+            transition: background-color .2s ease-out;
         }
     }
 
-    ul {
-        margin: 0;
-        padding: 0;
-        margin-top: 64px;
-        list-style: none;
-        overflow: hidden;
-        background-color: $black-color;
-        text-align: center;
-    }
+    // Logo
+    .logo {
+        float: left;
+        margin: 4.5px 2px 2px 12px;
 
-    li a {
-        display: block;
-        padding: 20px 20px;
-        text-transform: uppercase;
-        font-family: $heading-font;
-        font-weight: $heading-weight;
-        font-size: 1.25em;
-        letter-spacing: $heading-letter-spacing;
-        background-color: $black-color;
-        color: $accent-color;
-
-        &:hover {
-            background-color: $accent-color;
-            color: $black-color;
-            transition: all .2s ease-out 0s;
+        img {
+            max-height: 54px;
+            width: auto;
         }
     }
 
-    li {
-        &:nth-child(1) {
-            padding-top: 20px;
-        }
-        &:nth-child(5) {
-            padding-bottom: 20px;
-        }
-    }
-
-    .menu {
-        clear: both;
-        max-height: 0;
-        transition: max-height .2s ease-out 0s;
-    }
-
+    // Hamburger Menu
     .menu-icon {
         cursor: pointer;
         display: block;
@@ -282,16 +257,71 @@ form {
         }
     }
 
+    // Navigation Links
+    ul.menu {
+        
+
+            margin: 0;
+            padding: 0;
+            margin-top: 64px;
+            list-style: none;
+            overflow: hidden;
+            background-color: $black-color;
+            text-align: center;
+            clear: both;
+            max-height: 0;
+            transition: max-height .2s ease-out 0s;
+
+        li {
+            &:nth-child(1) {
+                padding-top: 20px;
+            }
+            &:nth-child(5) {
+                padding-bottom: 20px;
+            }
+
+            a {
+                display: block;
+                padding: 20px 20px;
+                text-transform: uppercase;
+                font-family: $heading-font;
+                font-weight: $heading-weight;
+                font-size: 1.25em;
+                letter-spacing: $heading-letter-spacing;
+                background-color: $black-color;
+                color: $accent-color;
+                transition: all .2s ease-out;
+    
+                &:hover {
+                    background-color: $accent-color;
+                    color: $black-color;
+                    transition: all .2s ease-out;
+                }
+            }
+        }
+    }
 }
 
-// LOGO
-.logo {
-    float: left;
-    padding: 2.5px 0px 0px 10px;
+/*
+  COMPONENT: Text: Top of Page
+*/
+.top-page {
+    position: relative;
+    padding-top: 80px;
+    background-color: $main-color;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    overflow: hidden;
+    @include box-shadow;
 
-    img {
-        max-height: 54px;
-        width: auto;
+    h1 { font-size: 3em; }
+
+    .container {
+        z-index: 1;
     }
 }
 
@@ -357,6 +387,9 @@ section {
     }
 }
 
+/*
+    COMPONENT: Image: Post Picture
+*/
 .grid-img {
     grid-area: image;
     margin-bottom: 1.5em;
@@ -372,10 +405,16 @@ section {
     grid-area: excerpt;
 }
 
+/*
+    COMPONENT: Text: Article
+*/
 .grid-article {
     grid-area: article;
 }
 
+/*
+    COMPONENT: Text: Sidebar
+*/
 .grid-sidebar {
     grid-area: sidebar;
     max-width: 100%;
@@ -498,26 +537,9 @@ section {
     background-size: contain;
   }
 
-// Top of Page
-.top-page {
-    position: relative;
-    padding-top: 80px;
-    background-color: $primary-color;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 150px;
-    overflow: hidden;
-    @include box-shadow;
-
-    .container {
-        z-index: 1;
-    }
-}
-
-// Breadcrumbs
+/*
+    COMPONENT: Text: Breadcrumbs
+*/
 .breadcrumbs {
     text-align: left;
     margin-bottom: 2em;
@@ -530,9 +552,10 @@ section {
         a {
             text-decoration: underline;
             background-color: transparent;
+            transition: background-color .2s ease-out;
 
             &:hover {
-                background-color: $primary-color;
+                background-color: $main-color;
                 transition: background-color .2s ease-out;
             }
         }
@@ -556,6 +579,7 @@ section {
     letter-spacing: $heading-letter-spacing;
     background-color: $black-color;
     color: #fff;
+    transition: all .2s ease-out;
 
     i {
         font-size: 1.1em;
@@ -565,7 +589,7 @@ section {
     &:hover {
         color: $black-color;
         background-color: #fff;
-        transition: all .2s ease-out 0s;
+        transition: all .2s ease-out;
     }
 }
 
@@ -574,11 +598,22 @@ section {
 
     background-color: transparent;
     color: $black-color;
+    transition: all .2s ease-out;
 
     &:hover {
-        color: $secondary-color;
+        color: $main-light-color;
         background-color: $black-color;
-        transition: all .2s ease-out 0s;
+        transition: all .2s ease-out;
+    }
+}
+
+/*
+    COMPONENT: Image: SVG Icon
+*/
+.svg-icon {
+    img {
+        width: 48px;
+        height: 48px;
     }
 }
 
@@ -621,7 +656,7 @@ section {
 // Picture BG
 .picture-bg {
     position: relative;
-    background-color: $primary-color;
+    background-color: $main-color;
     background-image: url('../assets/contact-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -640,7 +675,7 @@ section {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $primary-color;
+        background-color: $main-color;
         opacity: .75;
     }
 
@@ -652,14 +687,19 @@ section {
     }
 
     p {
-        background-color: $primary-color;
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
 
     h2,
     p {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    div {
+        padding: 50px 50px 70px;
+        background-color: rgba(255, 219, 216, .75);
+        z-index: 1;
     }
 }
 
@@ -671,14 +711,20 @@ footer {
     padding-bottom: 50px;
     @include gold-strip(bottom);
 
+    .professional-acc {
+        span:first-child {
+            @extend h5;
+            color: $accent-color;
+        }
+    }
+
     span,
-    h5,
     a {
         color: $accent-color;
     }
 
     a:hover {
-        color: $primary-color;
+        color: $main-color;
         transition: color .2s ease-out 0s;
     }
 
@@ -718,49 +764,54 @@ footer {
 
     h5 { font-size: 1.45em; }
 
+    /*
+        COMPONENT: Text: Navigation Menu
+    */
     #fixed-menu {
-        ul {
-            background-color: $primary-color;
-            margin-top: 0;
+
+        // Logo
+        .logo {
+            margin-left: 30px;
         }
 
-        li {
-            float: left;
-
-            &:nth-child(1) {
-                padding-top: 0px;
-            }
-            &:nth-child(5) {
-                padding-bottom: 0px;
-            }
-
-            a {
-                padding: 20px 30px;
-                font-size: 1.15em;
-                background-color: $primary-color;
-                color: $black-color;
-
-                &:hover {
-                    background-color: $black-color;
-                    color: $accent-color;
-                    transition: all .2s ease-out 0s;
-                }
-            }
-        }
-
-        .menu {
-            clear: none;
-            float: right;
-            max-height: none;
-        }
-
+        // Hamburger Menu
         .menu-icon {
             display: none;
         }
-    }
 
-    .logo {
-        padding-left: 30px;
+        // Navigation Links
+        ul.menu {
+            background-color: $main-color;
+            margin-top: 0;
+            clear: none;
+            float: right;
+            max-height: none;
+        
+            li {
+                float: left;
+    
+                &:nth-child(1) {
+                    padding-top: 0px;
+                }
+                &:nth-child(5) {
+                    padding-bottom: 0px;
+                }
+    
+                a {
+                    padding: 20px 30px;
+                    font-size: 1.15em;
+                    background-color: $main-color;
+                    color: $black-color;
+                    transition: all .2s ease-out;
+    
+                    &:hover {
+                        background-color: $black-color;
+                        color: $accent-color;
+                        transition: all .2s ease-out;
+                    }
+                }
+            }
+        }
     }
 
     section {
@@ -809,6 +860,9 @@ footer {
         column-gap: 30px;
     }
 
+    /*
+        COMPONENT: Text: Sidebar
+    */
     .grid-sidebar {
         .alt-bg {
             padding: 30px 10%;
@@ -833,6 +887,10 @@ footer {
             i {
                 margin: 20px 10px 10px;
             }
+    }
+
+    .picture-bg {
+        p { margin-bottom: .5em; }
     }
 }
 

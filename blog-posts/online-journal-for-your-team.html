@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#ffdbd8">
+    <meta name="author" content="Jessica Gozali">
+    <meta name="description" content="DIY Smart Home does not need to be expensive or complicated. This guide will show you how to setup a simple automation in your home.">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../favicon.png"/>
 
@@ -20,21 +24,28 @@
 </head>
 <body>
     <header id="header">
+
+        <!-- 
+            COMPONENT: Text: Navigation Menu
+            Hamburger menu display breakpoint 768px. Styled in main.scss
+        -->
         <div id="fixed-menu">
+
+            <!-- Skip to Content Link (default: off-screen, on focus: on-screen)-->
             <a class="skip-to-content-link secondary-btn" href="#main">
                 Skip to content
             </a>
 
-            <!-- LOGO -->
+            <!-- Logo -->
             <a href="../index.html" class="logo">
                 <img src="../assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
             </a>
 
-            <!-- HAMBURGER MENU -->
+            <!-- Hamburger Menu -->
             <input class="menu-btn" type="checkbox" id="menu-btn" aria-label="Toggle mobile navigation" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
-            <!-- NAVIGATION MENU -->
+            <!-- Navigation Links -->
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../about.html">About</a></li>
@@ -43,60 +54,84 @@
                 <li><a href="../contact.html">Contact</a></li>
             </ul>
         </div>
+        <!-- End COMPONENT: Text: Navigation Menu -->
     
-        <!-- Top of Page -->
+        <!-- 
+            COMPONENT: Text: Top of Page
+            Styled in main.scss. Except Home page overridden in /partials/_home.scss. ::before in respective partials.
+        -->
         <div class="top-page" id="blog-post-title">
             <div class="container">
                 <!-- Page Title -->
                 <h1>Online Journal for Your Team</h1>
             </div>
         </div>
+        <!-- End COMPONENT: Text: Top of Page -->
     </header>
 
     <main id="main">
         <section id="blog-post-page">
             <div class="container">
-                <!-- Breadcrumbs -->
+                
+                <!-- 
+                    COMPONENT: Text: Breadcrumbs
+                    Display link path from Home page. Styled in main.scss.
+                -->
                 <ul class="breadcrumbs">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../blog.html">Blog</a></li>
                     <li><a href="./online-journal-for-your-team.html">Online Journal for Your Team</a></li>
                 </ul>
+                <!-- End COMPONENT: Text: Breadcrumbs -->
                 
                 <!-- Uses grid container styled in main.scss and partial _blog.scss -->
                 <div class="grid-container grid-post">
-                    <div class="grid-img">
-                        <figure>
-                            <img src="../assets/posts-img/blog-post-1-500-350.jpg" alt="">
-                        </figure>
-                    </div>
+                    <!-- 
+                        COMPONENT: Image: Post Picture
+                        Contains image related to other component under the same .grid-container parent element. Using grid base (main.scss).
+                    -->
+                    <figure class="grid-img">
+                        <img src="../assets/posts-img/blog-post-1-500-350.jpg" alt="">
+                    </figure>
+                    <!-- End COMPONENT: Image: Post Picture -->
     
                     <div class="grid-title">
                         <span class="grid-author">Jessica G</span><span class="grid-date">18 Apr 2021</span>                 
                     </div>
     
+                    <!-- 
+                        COMPONENT: Text: Article
+                        Semantically structured. Using grid base layout. Styled in main.scss.
+                    -->
                     <div class="grid-article">
                         <article>
                             <p>Looking for an online journal to keep your projects running efficiently? Now, we have several options to choose from. In this article, I would compare some of the popular project management tools we can find today.</p>
     
                             <h2>Brand Options</h2>
-                            <p>There are many options of online project management tools available that you can find today, but we will be looking at a more generic ones. Unless your projects are software development projects (Jira is good for that), tools like Trello and</p>
+                            <p>There are many options of online project management tools available that you can find today, but we will be looking at a more generic ones. Unless your projects are software development projects (Jira is good for that), tools like Trello and Microsoft Planner would be powerful enough to manage your team.</p>
         
-                            <h3>Sub Sub Heading One</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti et aliquid atque ex? Fugit quidem recusandae ex, optio veritatis quod eius dignissimos aperiam aliquid placeat. Sint, rerum quibusdam. Dignissimos, quisquam?</p>
+                            <h3>Features Comparison</h3>
+                            <p>Trello is a management tool in a form of a subscription based web application which can be used collaboratively by all staff members within all departments to manage, to organise and to keep track of business operational activities, tasks, projects and plans. Microsoft Planner is a project management tool designed for small teams, to manage personal and teamwork plans.</p>
+
+                            <p>In comparison, feature wise, Trello and Microsoft Planner are similar. Both products manage daily tasks/projects/plan in a form of boards that consist of smaller tasks. Other capabilities, such as user accountability and access control are pretty similar. However, currently, Microsoft Planner has one feature that Trello is lacking, an event scheduling. This is useful if you frequently launch products or hold events.</p>
+
+                            <p>If you like Trello more, but needed the event scheduling feature from Microsoft Planner, you could integrate Trello with G Suite. You can then use Google event scheduling instead.</p>
         
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, iure? Error mollitia cupiditate perferendis porro nesciunt est ab, reprehenderit eos earum vero omnis sapiente qui! Ipsum, neque. Facere, sed possimus.</p>
-        
-                            <h3>Sub Sub Heading Two</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur minus, doloremque asperiores nulla, eveniet perferendis dolores esse animi excepturi nemo praesentium, consequuntur delectus sunt id tempore. Dolorum quisquam dolores saepe.</p>
-    
-                            <h2>Sub Heading Two</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium veniam voluptates ab commodi autem fugiat ea consectetur sequi placeat natus! Quo tenetur aliquid iste in tempora alias quidem eum quam?</p>
-    
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae incidunt commodi a nulla aspernatur laudantium, doloribus dignissimos quis voluptatum quibusdam veritatis at, dolorum repellendus id molestiae repudiandae quidem dolore exercitationem.</p>
+                            <h3>Price Comparison</h3>
+                            <p>At the time of writing this article, Trello offers a free plan for individuals and small teams. The other plan available is $10 per user per month with annual commitment, suitable for teams up to 100 members that are working on multiple projects. The enterprise plan, suitable for large companies with more than 100 people working on various projects would need to contact their sales team for pricing.</p>
+
+                            <p>Microsoft Planner also has three options available for us to choose. The difference from Trello is that all plans in Microsoft Planner have a maximum number of user of 300. The first option is the Basic plan for $6.90 per user per month with annual commitment. The second one is the Standard plan for $17.20 per user per month with annual commitment, which includes Microsoft Office desktop apps. The last option is the Premium plan for $27.50 per user per month with annual commitment, that has every features in Basic and Standard plans, plus advanced security features and device management features.</p>
+
+                            <p>Complete details of their products can be found in their official websites.</p>
+
+                            <h2>Conclusion</h2>
+                            <p>If your team is small, I would recommend Trello for its value over features offered. It has the essential features needed to track tasks, projects, plans and activities. Trello also keeps logs of actions for accountability and to increase integrity of business activities. It can be integrated with G Suite.</p>
                         </article>
         
-                        <!-- Post Pagination -->
+                        <!-- 
+                            COMPONENT: Text: Post Pagination
+                            Links to previous or next post. Styled in partials/_blog.scss.
+                        -->
                         <div class="post-pagination">
                             <div class="flex-container">
                                 <a href="#">
@@ -109,9 +144,15 @@
                                 </a>
                             </div>
                         </div>
+                        <!-- End COMPONENT: Text: Post Pagination -->
+
                     </div>
     
-                    <div class="grid-sidebar">
+                    <!-- 
+                        COMPONENT: Text: Sidebar
+                        Links to other posts and image gallery tiles. Styled in main.scss.
+                    -->
+                    <aside class="grid-sidebar">
                         <div class="alt-bg">
                             <span class="sidebar-title">Other Posts</span>
                             <ul>
@@ -129,16 +170,16 @@
                                         <img src="../assets/posts-img/blog-post-2-500-350.jpg" width="50" height="50" alt="">
                                         <div>
                                             <span>Work from Home Setup Guide</span>
-                                            <span>6 Feb 2021</span>
+                                            <span>15 Apr 2021</span>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./invitation-for-moogles.html">
+                                    <a href="./anti-virus-anti-malware-for-small-business.html">
                                         <img src="../assets/posts-img/blog-post-3-500-350.jpg" width="50" height="50" alt="">
                                         <div>
-                                            <span>Invitation for Moogles</span>
-                                            <span>9 Dec 2020</span>
+                                            <span>Anti-Virus/Anti-Malware for Small Business</span>
+                                            <span>8 Apr 2021</span>
                                         </div>    
                                     </a>
                                 </li>
@@ -147,7 +188,7 @@
                                         <img src="../assets/posts-img/blog-post-4-500-350.jpg" width="50" height="50" alt="">
                                         <div>
                                             <span>DIY Smart Home at a Budget</span>
-                                            <span>20 Sep 2020</span>
+                                            <span>5 Apr 2021</span>
                                         </div>
                                     </a>
                                 </li>
@@ -156,7 +197,7 @@
                                         <img src="../assets/posts-img/blog-post-5-500-350.jpg" width="50" height="50" alt="">
                                         <div>
                                             <span>Nintendo Free to Play: Pok&eacute;mon Caf&eacute; Mix</span>
-                                            <span>1 Jul 2020</span>
+                                            <span>3 Apr 2021</span>
                                         </div>
                                     </a>
                                 </li>
@@ -165,6 +206,10 @@
 
                         <div class="container">
                             <span class="sidebar-title">Gallery</span>
+                            <!-- 
+                                COMPONENT: Image: Image Gallery
+                                Display image tiles. CSS lightbox with checkbox :target. Styled in main.scss.
+                            -->
                             <div class="grid-container grid-gallery">
                                 <figure>
                                     <img src="../assets/posts-img/blog-post-1-500-350.jpg" width="150" height="100" alt="A pink journal, pen with golden cap and golden accessories.">
@@ -179,14 +224,16 @@
                                     <img src="../assets/projects-img/project-2-500-350.jpg" width="150" height="100" alt="Band Challenge top of website screenshot.">
                                 </figure>
                                 <figure>
-                                    <img src="../assets/posts-img/blog-post-3-500-350.jpg" width="150" height="100" alt="Screenshot of player on Fat Moogle mount flying near Bahrr Lehs at night.">
+                                    <img src="../assets/posts-img/blog-post-3-500-350.jpg" width="150" height="100" alt="A cursor pointing at the word Security in a device screen.">
                                 </figure>
                                 <figure>
                                     <img src="../assets/projects-img/project-3-500-350.jpg" width="150" height="100" alt="My Life as a Coder top of website screenshot.">
                                 </figure>
                             </div>
+                            <!-- End COMPONENT: Image: Image Gallery -->
                         </div>
-                    </div>
+                    </aside>
+                    <!-- End COMPONENT: Text: Sidebar -->
                 </div>
             </div>
         </section>
@@ -197,18 +244,17 @@
         <div class="container">
             <!-- Professional Accounts -->
             <div class="professional-acc">
-                <h5>Find Me</h5>
+                <span>Find Me</span>
                 <div>
-                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
-                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
-                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                    <a href="https://github.com/petitejess" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a>
+                    <a href="https://www.freecodecamp.org/petitejess" target="_blank" rel="noreferrer"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
+                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
                 </div>
             </div>
 
             <!-- Footer Logo -->
             <div class="alt-logo">
-
-                <img src="./assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
+                <img src="../assets/jessica-gozali-footer-logo-512-259.png" width="100" height="50" alt="Jessica Gozali Footer Logo">
                 <span>Copyright &copy; 2021 Jessica Gozali.</span>
             </div>
         </div>

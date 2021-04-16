@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#ffdbd8">
+    <meta name="author" content="Jessica Gozali">
+    <meta name="description" content="A website containing profile information and project portfolio of Jessica Gozali, a petite Front-End developer.">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png"/>
 
@@ -20,21 +24,27 @@
 </head>
 <body>
     <header id="header">
+        <!-- 
+            COMPONENT: Text: Navigation Menu
+            Hamburger menu display breakpoint 768px. Styled in main.scss
+        -->
         <div id="fixed-menu">
+
+            <!-- Skip to Content Link (default: off-screen, on focus: on-screen)-->
             <a class="skip-to-content-link secondary-btn" href="#main">
                 Skip to content
             </a>
 
-            <!-- LOGO -->
+            <!-- Logo -->
             <a href="./index.html" class="logo">
                 <img src="./assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
             </a>
 
-            <!-- HAMBURGER MENU -->
+            <!-- Hamburger Menu -->
             <input class="menu-btn" type="checkbox" id="menu-btn" aria-label="Toggle mobile navigation" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
-            <!-- NAVIGATION MENU -->
+            <!-- Navigation Links -->
             <ul class="menu">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -43,14 +53,19 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
+        <!-- End COMPONENT: Text: Navigation Menu -->
 
-        <!-- Top of Page -->
+        <!-- 
+            COMPONENT: Text: Top of Page
+            Styled in main.scss. Except Home page overridden in /partials/_home.scss. ::before in respective partials.
+        -->
         <div class="top-page" id="blog-title">
             <div class="container">
                 <!-- Page Title -->
                 <h1>Blog</h1>
             </div>
         </div>
+        <!-- End COMPONENT: Text: Top of Page -->
     </header>
 
     <main id="main" class="blog-page">
@@ -66,9 +81,14 @@
                         <span class="grid-author">Jessica G</span><span class="grid-date">18 Apr 2021</span>
                     </div>
 
+                    <!-- 
+                        COMPONENT: Image: Post Picture
+                        Contains image related to other component under the same .grid-container parent element. Using grid base (main.scss).
+                    -->
                     <figure class="grid-img">
                         <img src="./assets/posts-img/blog-post-1-500-350.jpg" width="800" height="550" alt="A pink journal, pen with golden cap and golden accessories.">
                     </figure>
+                    <!-- End COMPONENT: Image: Post Picture -->
 
                     <div class="grid-excerpt">
                         <p>Looking for an online journal to keep your projects running efficiently? Now, we have several options to choose from. In this article, I would compare some of the popular project management tools we can find today.</p>
@@ -90,12 +110,17 @@
                 <div class="grid-container grid-meta">
                     <div class="grid-title">
                         <h2>Work from Home Setup Guide</h2>
-                        <span class="grid-author">Jessica G</span><span class="grid-date">6 Feb 2021</span>
+                        <span class="grid-author">Jessica G</span><span class="grid-date">15 Apr 2021</span>
                     </div>
 
+                    <!-- 
+                        COMPONENT: Image: Post Picture
+                        Contains image related to other component under the same .grid-container parent element. Using grid base (main.scss).
+                    -->
                     <figure class="grid-img">
                         <img src="./assets/posts-img/blog-post-2-500-350.jpg" width="800" height="550" alt="Computer, laptop and office chair setup at home.">
                     </figure>
+                    <!-- End COMPONENT: Image: Post Picture -->
 
                     <div class="grid-excerpt">
                         <p>A guide to maximise productivity when you work from home. This time, I will guide you through setting up your workstation, choosing the right gears and software for your home office, with little tips and tricks to maximise comfort.</p>
@@ -117,21 +142,26 @@
                 <!-- Uses grid container styled in main.scss and partial _blog.scss -->
                 <div class="grid-container grid-meta">
                     <div class="grid-title">
-                        <h2>Invitation for Moogles</h2>
-                        <span class="grid-author">Jessica G</span><span class="grid-date">9 Dec 2020</span>
+                        <h2>Anti-Virus/Anti-Malware for Small Business</h2>
+                        <span class="grid-author">Jessica G</span><span class="grid-date">8 Apr 2021</span>
                     </div>
 
+                    <!-- 
+                        COMPONENT: Image: Post Picture
+                        Contains image related to other component under the same .grid-container parent element. Using grid base (main.scss).
+                    -->
                     <figure class="grid-img">
-                        <img src="./assets/posts-img/blog-post-3-500-350.jpg" width="800" height="550" alt="Screenshot of player on Fat Moogle mount flying near Bahrr Lehs at night.">
+                        <img src="./assets/posts-img/blog-post-3-500-350.jpg" width="800" height="550" alt="A cursor pointing at the word Security in a device screen.">
                     </figure>
+                    <!-- End COMPONENT: Image: Post Picture -->
 
                     <div class="grid-excerpt">
-                        <p>Calling all Moogles in Hydaelyn! Come to Luluca’s birthday celebration in Bahrr Lehs, Four Arms, The Churning Mists (15-28). And, don’t forget your poms! There will be all-you-can-have Kupo Nuts and never-ending mischievous games to play.</p>
+                        <p>When looking for anti-virus/anti-malware software for small businesses, there are things to consider to make sure you are not overpaying for things you don't need or missing features that you <em>do</em> need.</p>
                     </div>
 
                     <div class="grid-footer">
                         <!-- Call-to-Action -->
-                        <a class="secondary-btn" href="./blog-posts/invitation-for-moogles.html">Read More</a>
+                        <a class="secondary-btn" href="./blog-posts/anti-virus-anti-malware-for-small-business.html">Read More</a>
                     </div>
                 </div>
             </div>
@@ -145,12 +175,17 @@
                 <div class="grid-container grid-meta">
                     <div class="grid-title">
                         <h2>DIY Smart Home at a Budget</h2>
-                        <span class="grid-author">Jessica G</span><span class="grid-date">20 Sep 2020</span>
+                        <span class="grid-author">Jessica G</span><span class="grid-date">5 Apr 2021</span>
                     </div>
 
+                    <!-- 
+                        COMPONENT: Image: Post Picture
+                        Contains image related to other component under the same .grid-container parent element. Using grid base (main.scss).
+                    -->
                     <figure class="grid-img">
                         <img src="./assets/posts-img/blog-post-4-500-350.jpg" width="800" height="550" alt="A Google Nest Mini speaker on a wooden shelf.">
                     </figure>
+                    <!-- End COMPONENT: Image: Post Picture -->
 
                     <div class="grid-excerpt">
                         <p>DIY setup of your smart home system is not that expensive or difficult. And the best part of this guide is, it is renter friendly. You can just unplug everything and bring them all with you when you decide to move out.</p>
@@ -173,15 +208,20 @@
                 <div class="grid-container grid-meta">
                     <div class="grid-title">
                         <h2>Nintendo Free to Play: Pok&eacute;mon Caf&eacute; Mix</h2>
-                        <span class="grid-author">Jessica G</span><span class="grid-date">1 Jul 2020</span>
+                        <span class="grid-author">Jessica G</span><span class="grid-date">3 Apr 2021</span>
                     </div>
 
+                    <!-- 
+                        COMPONENT: Image: Post Picture
+                        Contains image related to other component under the same .grid-container parent element. Using grid base (main.scss).
+                    -->
                     <figure class="grid-img">
                         <img src="./assets/posts-img/blog-post-5-500-350.jpg" width="800" height="550" alt="Screenshot of Pokemon Cafe Mix game.">
                     </figure>
+                    <!-- End COMPONENT: Image: Post Picture -->
 
                     <div class="grid-excerpt">
-                        <p>Bored? Just play this cute puzzle game. Clear the puzzle, build your caf&eacute; to see more Pok&eacute;mon visiting your place. Cuteness overload! The best part is, it is free to play!</p>
+                        <p>Bored? Just try this cute puzzle game. Clear the puzzle to build your caf&eacute; to see more Pok&eacute;mon visiting your place. Cuteness overload! The best part is, it is free to play!</p>
                     </div>
 
                     <div class="grid-footer">
@@ -198,17 +238,17 @@
         <div class="container">
             <!-- Professional Accounts -->
             <div class="professional-acc">
-                <h5>Find Me</h5>
+                <span>Find Me</span>
                 <div>
-                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
-                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
-                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                    <a href="https://github.com/petitejess" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a>
+                    <a href="https://www.freecodecamp.org/petitejess" target="_blank" rel="noreferrer"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
+                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
                 </div>
             </div>
 
             <!-- Footer Logo -->
             <div class="alt-logo">
-                <img src="./assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
+                <img src="./assets/jessica-gozali-footer-logo-512-259.png" width="100" height="50" alt="Jessica Gozali Footer Logo">
                 <span>Copyright &copy; 2021 Jessica Gozali.</span>
             </div>
         </div>
