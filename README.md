@@ -9,9 +9,9 @@
 ## Purpose
 ---
 
-This Portfolio Website project demonstrates the level of understanding of HTML and CSS in their real-world application by creating a static website. It allows exposure to many aspects of website production process, including planning, design, implementation, security, ethics, testing, deployment, CI/CD.
+This Portfolio Website project demonstrates the level of understanding of *HTML* and *CSS* in their real-world application by creating a static website. It allows exposure to many aspects of website production process, including planning, design, implementation, security, ethics, testing, deployment, CI/CD.
 
-The end-product, which is a professional portfolio, would be used as a showcase to display personality, skills, and interests to prospective employers.
+The end-product, which is a *professional portfolio*, would be used as a showcase to display personality, skills, and interests to prospective employers.
 
 &nbsp;    
 
@@ -20,7 +20,7 @@ The end-product, which is a professional portfolio, would be used as a showcase 
 
 The website includes access to downloadable PDF Resume, blog with multiple posts in individual page, project showcase with individual project detail page, links to professional accounts and a contact form.
 
-This portfolio website was made following W3C standard and WCAG, validated and tested using W3C online validation tools, colour contrast assessor tool listed in WCAG and Google lighthouse.
+This portfolio website was made following **W3C standard** and **WCAG**, validated and tested using W3C online validation tools, colour contrast assessor tool listed in WCAG and Google lighthouse.
 
 &nbsp;    
 
@@ -47,13 +47,14 @@ The website was designed with focus on accessibility support. For example, using
 &nbsp;    
 
 ### Responsive Mobile-First
-The layout of this website was designed with Mobile-First approach, using media query breakpoints from small screen going to large screen to ensure all information is visible across all screen sizes.
+The layout of this website was designed with **Mobile-First** approach, using *media query* breakpoints from small screen going to large screen to ensure all information is visible across all screen sizes.
 
-The website layout also utilises flexbox and grid, in conjunction with relative unit measurements for font and container sizes.
+The website layout also utilises CSS *flexbox* and *grid*, in conjunction with *relative measurement units* for font and container sizes.
 
 &nbsp;    
 
 ### SRI Implementation
+Subresource Integrity was implemented in this website for CSS file of Font Awesome (*all.min.css*) sourced from a CDN using **sha-512**. The main CSS stylesheet for this website (*main.css*) also implements SRI using **sha-512**, generated through openssl command.
 
 &nbsp;    
 
@@ -61,6 +62,8 @@ The website layout also utilises flexbox and grid, in conjunction with relative 
 ---
 
 This website consists of 5 (five) top level pages, 5 (five) subpages under Projects page, 5 (five) subpages under Blog page, and 1 (one) downloadable PDF file.
+
+The *sitemap.xml* file can be found in root folder of this website.
 
 &nbsp;    
 
