@@ -7,7 +7,7 @@
 >GitHub repository link: [https://github.com/petitejess/jg-portfolio](https://github.com/petitejess/jg-portfolio)
 
 ## Purpose
----
+The purpose of this project is to demonstrate 
 
 ## Functionality/Features
 ---

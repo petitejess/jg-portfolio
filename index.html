@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#ffdbd8">
+    <meta name="author" content="Jessica Gozali">
+    <meta name="description" content="A website containing profile information and project portfolio of Jessica Gozali, a petite Front-End developer.">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png"/>
 
@@ -20,21 +24,28 @@
 </head>
 <body>
     <header id="header">
+
+        <!-- 
+            COMPONENT: Text: Navigation Menu
+            Hamburger menu display breakpoint 768px. Styled in main.scss
+        -->
         <div id="fixed-menu">
+
+            <!-- Skip to Content Link (default: off-screen, on focus: on-screen)-->
             <a class="skip-to-content-link secondary-btn" href="#main">
                 Skip to content
             </a>
 
-            <!-- LOGO -->
+            <!-- Logo -->
             <a href="./index.html" class="logo">
                 <img src="./assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
             </a>
 
-            <!-- HAMBURGER MENU -->
+            <!-- Hamburger Menu -->
             <input class="menu-btn" type="checkbox" id="menu-btn" aria-label="Toggle mobile navigation" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
-            <!-- NAVIGATION MENU -->
+            <!-- Navigation Links -->
             <ul class="menu">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -43,11 +54,11 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
+        <!-- End COMPONENT: Text: Navigation Menu -->
 
-        <!--
-            Top of Page:
-            Homepage (index.html) styled in partial _home.scss, overriding main.scss. 
-            Other pages styled in main.scss.
+        <!-- 
+            COMPONENT: Text: Top of Page
+            Styled in main.scss. Except Home page overridden in /partials/_home.scss. ::before in respective partials.
         -->
         <div class="top-page" id="home-title">
             <div class="container">
@@ -64,20 +75,21 @@
                 <img class="title-img" src="./assets/responsive-display-500-370.png" width="500" height="370" alt="Responsive website showcase on large, medium, and small screens.">
             </div>
         </div>
+        <!-- End COMPONENT: Text: Top of Page -->
     </header>
 
     <main id="main">
-
-        <!-- RECENT PROJECTS:
-            Styled in partial _home.scss.
-        -->
         <section id="recent-projects">
             <div class="container">
                 <h2>Recent Projects</h2>
 
-                <div class="flex-container">
-                    <!-- Recent Project Tile -->
-                    <div>
+                <!-- 
+                    COMPONENT: Image: Card Container
+                    Card displays image and short information of project. Using flexbox base (main.scss), overridden in /partials/_home.scss.
+                -->
+                <div class="flex-container card-container">
+                    <div class="card">
+                        <!-- Card Image -->
                         <a href="https://jessicagozali.com.au/zen-garden-challenge-jg/" target="_blank">
                             <img src="./assets/projects-img/project-1-500-350.jpg" width="500" height="350" alt="CSS Zen Garden top of website screenshot">
                         </a>
@@ -86,9 +98,9 @@
                         <div class="tech-stack"><span class="brand-html5"><i class="fab fa-html5"></i></span><span class="brand-css3"><i class="fab fa-css3 brand-css3"></i></span></div>
                         <span>Go to <a class="highlight-link" href="https://jessicagozali.com.au/zen-garden-challenge-jg/" target="_blank">live website</a>.</span>
                     </div>
-
-                    <!-- Recent Project Tile -->
-                    <div>
+                    
+                    <div class="card">
+                        <!-- Card Image -->
                         <a href="https://jessicagozali.com.au/band-challenge-jg/" target="_blank">
                             <img src="./assets/projects-img/project-2-500-350.jpg" width="500" height="350" alt="Band Multipage Website top of website screenshot">
                         </a>
@@ -98,6 +110,7 @@
                         <span>Go to <a class="highlight-link" href="https://jessicagozali.com.au/band-challenge-jg/" target="_blank">live website</a>.</span>
                     </div>
                 </div>
+                <!-- End COMPONENT: Image: Card Container -->
 
                 <!-- Call-to-Action -->
                 <a class="secondary-btn" href="./projects.html">View All Projects</a>
@@ -106,31 +119,33 @@
 
         <!-- Picture BG -->
         <section class="picture-bg">
-            <h2>Contact Me</h2>
-            <p>I am a <strong>Sydney</strong> based Front-End developer, but I'm geared to work remotely if needed.</p>
-            <p>Find out what else I can do!</p>
-
-            <!-- Call-to-Action -->
-            <a class="secondary-btn" href="./contact.html">Message Me</a>
+            <div>
+                <h2>Contact Me</h2>
+                <p>I am a <strong>Sydney</strong> based Front-End developer, but I'm geared to work remotely if needed.</p>
+                <p>Find out what else I can do!</p>
+        
+                <!-- Call-to-Action -->
+                <a class="secondary-btn" href="./contact.html">Message Me</a>
+            </div>
         </section>
     </main>
-
+    
     <!-- FOOTER -->
     <footer>
         <div class="container">
             <!-- Professional Accounts -->
             <div class="professional-acc">
-                <h5>Find Me</h5>
+                <span>Find Me</span>
                 <div>
-                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
-                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
-                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                    <a href="https://github.com/petitejess" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a>
+                    <a href="https://www.freecodecamp.org/petitejess" target="_blank" rel="noreferrer"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
+                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
                 </div>
             </div>
 
             <!-- Footer Logo -->
             <div class="alt-logo">
-                <img src="./assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
+                <img src="./assets/jessica-gozali-footer-logo-512-259.png" width="100" height="50" alt="Jessica Gozali Footer Logo">
                 <span>Copyright &copy; 2021 Jessica Gozali.</span>
             </div>
         </div>

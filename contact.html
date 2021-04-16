@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#ffdbd8">
+    <meta name="author" content="Jessica Gozali">
+    <meta name="description" content="A website containing profile information and project portfolio of Jessica Gozali, a petite Front-End developer.">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png"/>
 
@@ -20,21 +24,28 @@
 </head>
 <body>
     <header id="header">
+
+        <!-- 
+            COMPONENT: Text: Navigation Menu
+            Hamburger menu display breakpoint 768px. Styled in main.scss
+        -->
         <div id="fixed-menu">
+
+            <!-- Skip to Content Link (default: off-screen, on focus: on-screen)-->
             <a class="skip-to-content-link secondary-btn" href="#main">
                 Skip to content
             </a>
 
-            <!-- LOGO -->
+            <!-- Logo -->
             <a href="./index.html" class="logo">
                 <img src="./assets/jessica-gozali-logo-512-259.png" width="107" height="54" alt="Jessica Gozali Logo">
             </a>
 
-            <!-- HAMBURGER MENU -->
+            <!-- Hamburger Menu -->
             <input class="menu-btn" type="checkbox" id="menu-btn" aria-label="Toggle mobile navigation" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
-            <!-- NAVIGATION MENU -->
+            <!-- Navigation Links -->
             <ul class="menu">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -43,14 +54,19 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
+        <!-- End COMPONENT: Text: Navigation Menu -->
 
-        <!-- Top of Page -->
+        <!-- 
+            COMPONENT: Text: Top of Page
+            Styled in main.scss. Except Home page overridden in /partials/_home.scss. ::before in respective partials.
+        -->
         <div class="top-page" id="contact-title">
             <div class="container">
                 <!-- Page Title -->
                 <h1>Contact Me</h1>
             </div>
         </div>
+        <!-- End COMPONENT: Text: Top of Page -->
     </header>
 
     <main id="main">
@@ -61,12 +77,12 @@
                 <div class="flex-container">
                     <div>
                         <p>Let me help with your next project. Ask me anything, or check out my current projects in GitHub or CodePen, or download my resume. Or, you can use the contact form to leave me a message.</p>
-                        <h2>Account Links</h2>
 
+                        <h2>Account Links</h2>
                         <!-- Professional Accounts -->
                         <div class="professional-acc">
-                            <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span> GitHub</span></a>
-                            <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-codepen"></i><span> CodePen</span></a>
+                            <a href="https://github.com/petitejess" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><span> GitHub</span></a>
+                            <a href="https://codepen.io/petitejess" target="_blank" rel="noreferrer"><i class="fab fa-codepen"></i><span> CodePen</span></a>
                         </div>
                         <!-- Call-to-Action -->
                         <a class="secondary-btn" href="./resume/JessicaGozali_Resume_Template.pdf" target="_blank"><i class="far fa-file-pdf"></i> My Resume (PDF)</a>
@@ -88,7 +104,7 @@
 
                             <!-- Message -->
                             <label for="message">Message: <sup class="required">(required)</sup></label>
-                            <textarea name="" id="" cols="30" rows="5" placeholder="e.g. Can you make me a custom LMS?" required></textarea>
+                            <textarea name="" id="" cols="30" rows="5" placeholder="e.g. Can you make me a website?" required></textarea>
 
                             <!-- Recaptcha -->
                             <div data-netlify-recaptcha="true"></div>
@@ -107,17 +123,17 @@
         <div class="container">
             <!-- Professional Accounts -->
             <div class="professional-acc">
-                <h5>Find Me</h5>
+                <span>Find Me</span>
                 <div>
-                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
-                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp"></i><span>freeCodeCamp</span></a>
-                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                    <a href="https://github.com/petitejess" target="_blank"><i class="fab fa-github" rel="noreferrer"></i><span>GitHub</span></a>
+                    <a href="https://www.freecodecamp.org/petitejess" target="_blank"><i class="fab fa-free-code-camp" rel="noreferrer"></i><span>freeCodeCamp</span></a>
+                    <a href="https://www.linkedin.com/in/jessicagozali/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
                 </div>
             </div>
 
             <!-- Footer Logo -->
             <div class="alt-logo">
-                <img src="./assets/jessica-gozali-footer-logo-512-259.png" alt="Jessica Gozali Footer Logo">
+                <img src="./assets/jessica-gozali-footer-logo-512-259.png" width="100" height="50" alt="Jessica Gozali Footer Logo">
                 <span>Copyright &copy; 2021 Jessica Gozali.</span>
             </div>
         </div>

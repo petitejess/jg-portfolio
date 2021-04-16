@@ -1,12 +1,13 @@
-// Top of Page
+/*
+  COMPONENT: Text: Top of Page
+*/
 #contact-title {
-
     // Top of Page BG Text
     &::before {
         content: 'CONTACT ME';
         font-family: $heading-font;
         font-weight: $heading-weight;
-        color: $secondary-color;
+        color: $main-light-color;
         font-size: 8em;
         position: absolute;
         z-index: 0;
@@ -41,7 +42,7 @@
                 background-color: transparent;
 
                 &:hover {
-                    background-color: $primary-color;
+                    background-color: $main-color;
                     transition: background-color .2s ease-in-out;
                 }
             }
@@ -60,7 +61,7 @@
         // Override Call-to-Action
         .primary-btn {
             padding: 15px;
-            font-size: 1.2em;
+            font-size: 1.25em;
             width: 100%;
         }
     }

@@ -1,12 +1,13 @@
-// Top of Page
+/*
+  COMPONENT: Text: Top of Page
+*/
 #blog-title {
-
     // Top of Page BG Text
     &::before {
         content: 'BLOG';
         font-family: $heading-font;
         font-weight: $heading-weight;
-        color: $secondary-color;
+        color: $main-light-color;
         font-size: 8em;
         position: absolute;
         z-index: 0;
@@ -22,7 +23,9 @@
 }
 
 // Blog Post Page Styling
-// Top of Page
+/*
+  COMPONENT: Text: Top of Page
+*/
 #blog-post-title {
 
     // Top of Page BG Text
@@ -30,7 +33,7 @@
         content: 'BLOG POST';
         font-family: $heading-font;
         font-weight: $heading-weight;
-        color: $secondary-color;
+        color: $main-light-color;
         font-size: 8em;
         position: absolute;
         z-index: 0;
@@ -41,15 +44,27 @@
 
     // Override grid container
     .grid-container {
+        /*
+            COMPONENT: Text: Article
+        */
         .grid-article {
             h2 {
                 text-align: left;
                 margin-bottom: 10px;
             }
+
+            article {
+                > p:last-child {
+                    padding-bottom: 50px;
+                    border-bottom: 1px solid $grey-color;
+                }
+            }
         }
     }
 
-    // Post Pagination
+    /*
+        COMPONENT: Post Pagination
+    */
     .post-pagination {
         .flex-container {
             justify-content: space-between;
@@ -94,6 +109,9 @@
             float: left;
         }
 
+        /*
+            COMPONENT: Post Pagination
+        */
         .post-pagination {
             a {
                 display: inline-block;
