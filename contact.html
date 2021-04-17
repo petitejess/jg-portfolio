@@ -20,6 +20,9 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 
+    <!-- Contact Form Validation -->
+
+
     <title>CONTACT | Jessica Gozali Portfolio</title>
 </head>
 <body>
@@ -93,21 +96,21 @@
                         <!-- CONTACT FORM:
                         Styled in main.scss and partial _contact.scss.
                         -->
-                        <form id="contact-form" name="contact" method="POST" autocomplete="on" data-netlify="true">
+                        <form id="contact-form" name="contact" method="POST" autocomplete="on" netlify-honeypot="bot-field" data-netlify="true" novalidate="novalidate">
                             <!-- Name -->
                             <label for="name">Name: <sup class="required">(required)</sup></label>
                             <input type="text" name="name" id="name" placeholder="e.g. Jane Citizen" required>
+                            <span class="name-err"></span>
 
                             <!-- Email -->
                             <label for="email">Email: <sup class="required">(required)</sup></label>
                             <input type="email" name="email" id="email" placeholder="e.g. emailaddress@domain.com" required>
+                            <span class="email-err"></span>
 
                             <!-- Message -->
                             <label for="message">Message: <sup class="required">(required)</sup></label>
-                            <textarea name="message" id="message" cols="30" rows="5" placeholder="e.g. Can you make me a website?" required></textarea>
-
-                            <!-- Recaptcha -->
-                            <div data-netlify-recaptcha="true"></div>
+                            <textarea name="message" id="message" maxlength="250" cols="30" rows="5" placeholder="e.g. Can you make me a website?" required></textarea>
+                            <span class="message-err"></span>
 
                             <!-- Call-to-Action -->
                             <input class="primary-btn" type="submit" name="submit" id="submit" value="Send Message">
@@ -138,5 +141,91 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Form validation
+        const form = document.getElementById('contact-form');
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+
+        const nameErr = document.querySelector('#name + span.name-err');
+        const emailErr = document.querySelector('#email + span.email-err');
+        const messageErr = document.querySelector('#message + span.message-err');
+
+        name.addEventListener('input', function(e) {
+            if (name.validity.valid) {
+                nameErr.textContent = "";
+                nameErr.className = "name-err";
+            }
+            else {
+                errorMessage('name');
+            }
+        });
+
+        email.addEventListener('input', function (e) {
+            if (email.validity.valid) {
+                emailErr.textContent = "";
+                emailErr.className = "email-err";
+            }
+            else {
+                errorMessage('email');
+            }
+        });
+
+        message.addEventListener('input', function(e) {
+            if (message.validity.valid) {
+                messageErr.textContent = "";
+                messageErr.className = "message-err";
+            }
+            else {
+                errorMessage('message');
+            }
+        });
+
+        form.addEventListener('submit', function(e) {
+            if (!name.validity.valid) {
+                errorMessage('name');
+                e.preventDefault();
+            }
+
+            if (!email.validity.valid) {
+                errorMessage('email');
+                e.preventDefault();
+            }
+            
+            if (!message.validity.valid) {
+                errorMessage('message');
+                e.preventDefault();
+            }
+        });
+
+        function errorMessage(type) {
+            switch(type) {
+                case 'name':
+                    if (name.validity.valueMissing) {
+                        nameErr.textContent = "Please enter your name.";
+                    }
+                case 'email':
+                    if (email.validity.valueMissing) {
+                        emailErr.textContent = "Please enter your email address.";
+                    }
+                    else if (email.validity.typeMismatch) {
+                        emailErr.textContent = "Please enter a valid email address."
+                    }
+                case 'message':
+                    if (message.validity.valueMissing) {
+                        messageErr.textContent = "Please enter your message.";
+                    }
+                    else if (message.validity.tooLong) {
+                        messageErr.textContent = "Message is too long. Please keep it under ${message.maxLength} characters."
+                    }
+            }
+
+            nameErr.className = "name-err error";
+            emailErr.className = "email-err error";
+            messageErr.className = "message-err error";
+        }
+    </script>
 </body>
 </html>
