@@ -23,21 +23,25 @@ This portfolio website was made following **W3C standard** and **WCAG**, validat
 &nbsp;  
 
 ### Semantically structured HTML
-This website uses proper and valid HTML semantics, such as proper use of heading tags in logical order, separation of different types of contents under correct HTML tags (i.e., navigation menu inside `<nav>`, header content inside `<header>` tag, main content inside `<main>` tag, etc.).
+
+This website uses proper and valid HTML semantics, such as proper use of heading tags in logical order, separation of different types of contents under correct HTML tags (e.g., navigation menu inside `<nav>`, header content inside `<header>` tag, main content inside `<main>` tag, etc.).
 
 &nbsp;  
 
 ### HTML Code Validation
+
 The core HTML code in each page of this website has been validated through [W3C HTML Validation Service](https://validator.w3.org/) and is error or warning free.
 
 &nbsp;  
 
 ### CSS Code Validation
+
 The core CSS code included in this website has been validated through [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) and is error or warning free.
 
 &nbsp;  
 
 ### WCAG for Accessibility Support
+
 The colour contrast in this website passes the requirements per WCAG 2.1 guidelines, tested on [a11y Color Contrast Accessibility Validator](https://color.a11y.com/).
 
 The website was designed with focus on accessibility support. For example, using clear outline on focused targetable element, logical tab order, Skip to content link, always visible labels that are associated properly with the corresponding input fields, semantically structured HTML, high contrast colours, etc.
@@ -45,6 +49,7 @@ The website was designed with focus on accessibility support. For example, using
 &nbsp;  
 
 ### Responsive Mobile-First
+
 The layout of this website was designed with **Mobile-First** approach, using *media query* breakpoints from small screen going to large screen to ensure all information is visible across all screen sizes.
 
 The website layout also utilises CSS *flexbox* and *grid*, in conjunction with *relative measurement units* for font and container sizes.
@@ -52,6 +57,7 @@ The website layout also utilises CSS *flexbox* and *grid*, in conjunction with *
 &nbsp;  
 
 ### SRI Implementation
+
 Subresource Integrity was implemented in this website for CSS file of Font Awesome (*all.min.css*) sourced from a CDN using **sha-512**. The main CSS stylesheet for this website (*main.css*) also implements SRI using **sha-512**, generated through openssl command.
 
 &nbsp;  
