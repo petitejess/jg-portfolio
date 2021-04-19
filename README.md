@@ -77,6 +77,7 @@ The *sitemap.xml* file can be found in root folder of this website.
 ## Target Audience
 
 The contents on the website include materials, brands, terms specific to website or software development industry. Therefore, the website is suitable for the following target audience:  
+
 - Hiring personnel of a company
 - Business owner of a technology company
 - Digital agency
@@ -90,6 +91,7 @@ Technology and tools used in the process of development and deployment of this p
 &nbsp;  
 
 ### Technology and Development Tools
+
 - HTML5
 - CSS3
 - SASS
@@ -100,6 +102,7 @@ Technology and tools used in the process of development and deployment of this p
 &nbsp;  
 
 ### Planning and Design Tools
+
 - Trello
 - diagrams.net
 - XML Sitemaps
@@ -110,6 +113,7 @@ Technology and tools used in the process of development and deployment of this p
 &nbsp;  
 
 ### Deployment Platform
+
 - Netlify
 
 &nbsp;  
