@@ -308,12 +308,12 @@ form {
                 letter-spacing: $heading-letter-spacing;
                 background-color: $black-color;
                 color: $accent-color;
-                transition: all .2s ease-out;
+                transition: background-color .2s ease-out, color .2s ease-out;
     
                 &:hover {
                     background-color: $accent-color;
                     color: $black-color;
-                    transition: all .2s ease-out;
+                    transition: background-color .2s ease-out, color .2s ease-out;
                 }
             }
         }
@@ -823,12 +823,12 @@ footer {
                     font-size: 1.15em;
                     background-color: $main-color;
                     color: $black-color;
-                    transition: all .2s ease-out;
+                    transition: background-color .2s ease-out, color .2s ease-out;
     
                     &:hover {
                         background-color: $black-color;
                         color: $accent-color;
-                        transition: all .2s ease-out;
+                        transition: background-color .2s ease-out, color .2s ease-out;
                     }
                 }
             }
