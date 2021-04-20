@@ -72,6 +72,10 @@ a {
 }
 a:focus {
   outline: 2px dotted #f24052;
+  color: #222;
+}
+a:target {
+  color: #222;
 }
 
 abbr {
@@ -530,7 +534,7 @@ section {
   letter-spacing: 0.15px;
   background-color: #222;
   color: #fff;
-  transition: all 0.2s ease-out;
+  transition: border 0.2s ease-out, color 0.2s ease-out, background-color 0.2s ease-out;
 }
 .primary-btn i, .secondary-btn i {
   font-size: 1.1em;
@@ -540,20 +544,20 @@ section {
   border: 3px solid #222;
   color: #222;
   background-color: #fff;
-  transition: all 0.2s ease-out;
+  transition: border 0.2s ease-out, color 0.2s ease-out, background-color 0.2s ease-out;
 }
 
 .secondary-btn {
   background-color: transparent;
   border: 3px solid #222;
   color: #222;
-  transition: all 0.2s ease-out;
+  transition: border 0.2s ease-out, color 0.2s ease-out, background-color 0.2s ease-out;
 }
 .secondary-btn:hover {
   color: #ffe4e2;
   border: 3px solid transparent;
   background-color: #222;
-  transition: all 0.2s ease-out;
+  transition: border 0.2s ease-out, color 0.2s ease-out, background-color 0.2s ease-out;
 }
 
 /*
