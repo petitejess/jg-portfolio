@@ -280,12 +280,12 @@ form span.name-err.error, form span.email-err.error, form span.message-err.error
   letter-spacing: 0.15px;
   background-color: #222;
   color: #f6e2c2;
-  transition: all 0.2s ease-out;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 #fixed-menu ul.menu li a:hover {
   background-color: #f6e2c2;
   color: #222;
-  transition: all 0.2s ease-out;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
 /*
@@ -740,12 +740,12 @@ footer .alt-logo span {
     font-size: 1.15em;
     background-color: #ffdbd8;
     color: #222;
-    transition: all 0.2s ease-out;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
   }
   #fixed-menu ul.menu li a:hover {
     background-color: #222;
     color: #f6e2c2;
-    transition: all 0.2s ease-out;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
   }
 
   section {
