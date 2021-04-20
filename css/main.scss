@@ -595,14 +595,15 @@ section {
     text-decoration: none;
     font-family: $heading-font;
     font-weight: $heading-weight;
-    border: 3px solid #fff;
+    border: 3px solid;
+    border-color: #fff;
     padding: 5px 15px 10px;
     margin-top: 30px;
     font-size: 1.1em;
     letter-spacing: $heading-letter-spacing;
     background-color: $black-color;
     color: #fff;
-    transition: border .2s ease-out, color .2s ease-out, background-color .2s ease-out;
+    transition: border-color .2s ease-out, color .2s ease-out, background-color .2s ease-out;
 
     i {
         font-size: 1.1em;
@@ -610,10 +611,10 @@ section {
     }
 
     &:hover {
-        border: 3px solid $black-color;
+        border-color: $black-color;
         color: $black-color;
         background-color: #fff;
-        transition: border .2s ease-out, color .2s ease-out, background-color .2s ease-out;
+        transition: border-color .2s ease-out, color .2s ease-out, background-color .2s ease-out;
     }
 }
 
@@ -621,15 +622,16 @@ section {
     @extend .primary-btn;
 
     background-color: transparent;
-    border: 3px solid $black-color;
+    border: 3px solid;
+    border-color: $black-color;
     color: $black-color;
-    transition: border .2s ease-out, color .2s ease-out, background-color .2s ease-out;
+    transition: border-color .2s ease-out, color .2s ease-out, background-color .2s ease-out;
 
     &:hover {
         color: $main-light-color;
-        border: 3px solid transparent;
+        border-color: transparent;
         background-color: $black-color;
-        transition: border .2s ease-out, color .2s ease-out, background-color .2s ease-out;
+        transition: border-color .2s ease-out, color .2s ease-out, background-color .2s ease-out;
     }
 }
 
