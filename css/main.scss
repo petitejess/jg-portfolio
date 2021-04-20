@@ -67,6 +67,11 @@ a {
 
     &:focus {
         outline: 2px dotted $red-color;
+        color: $black-color
+    }
+
+    &:target {
+        color: $black-color;
     }
 }
 

@@ -72,6 +72,10 @@ a {
 }
 a:focus {
   outline: 2px dotted #f24052;
+  color: #222;
+}
+a:target {
+  color: #222;
 }
 
 abbr {
